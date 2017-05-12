@@ -157,8 +157,9 @@ body {
   .main__container-svg__container {
     display: none; }
   .main__container-social__links {
-    left: 0;
-    height: 0; }
+    left: 7px;
+    height: 0;
+    bottom: 50px; }
   .main__container-copy p {
     width: 300px;
     bottom: 130px; }
