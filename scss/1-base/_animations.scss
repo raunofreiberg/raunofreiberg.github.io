@@ -1,0 +1,32 @@
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        stroke-opacity: 0.90;
+        opacity: .95;
+        fill: none;
+        stroke: #222;
+    }
+    93.93939393939394% {
+        stroke-opacity: 0.35;
+        opacity: .95;
+    }
+    100% {
+        stroke-opacity: 0;
+        opacity: 1;
+        fill: url(#img1)
+    }
+}

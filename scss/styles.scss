@@ -2,6 +2,7 @@
 @import '1-base/_breakpoints';
 @import '1-base/_variables';
 @import '1-base/_mixins';
+@import '1-base/_animations';
 @import '2-includes/_portfolio.scss';
 body {
     margin: 0;
@@ -23,6 +24,7 @@ body {
         left: 20px;
         margin: 20px;
         @include align-self(flex-start);
+        animation: fadeInText 1.4s ease-in-out;
     }
     &-svg__container {
         width: 100%;
@@ -49,28 +51,6 @@ body {
                     stroke-dashoffset: 6232;
                     fill: url(#img1);
                     animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s;
-                }
-                @keyframes draw {
-                    100% {
-                        stroke-dashoffset: 0;
-                    }
-                }
-                @keyframes fade {
-                    0% {
-                        stroke-opacity: 0.90;
-                        opacity: .95;
-                        fill: none;
-                        stroke: #222;
-                    }
-                    93.93939393939394% {
-                        stroke-opacity: 0.35;
-                        opacity: .95;
-                    }
-                    100% {
-                        stroke-opacity: 0;
-                        opacity: 1;
-                        fill: url(#img1)
-                    }
                 }
             }
         }
@@ -125,6 +105,7 @@ body {
         bottom: 20px;
         width: 200px;
         padding: 0;
+        animation: fadeInText 1.4s ease-in-out;
         li {
             display: inline-block;
             margin-right: 20px;
@@ -158,6 +139,7 @@ body {
         font-family: $paragraphFont;
         font-weight: 300;
         font-size: 20px;
+        animation: fadeInText 1.4s ease-in-out;
     }
 }
 
@@ -181,14 +163,5 @@ body {
         .main__copy-btn {
             bottom: 50px;
         }
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
