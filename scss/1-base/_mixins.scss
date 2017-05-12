@@ -1,0 +1,26 @@
+@mixin Button() {
+    border: 3px solid #111;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: $paragraphFont;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    @include transition(all 0.2s ease-in-out);
+    &:hover {
+        background: #111;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+@mixin paragraphStyles() {
+    letter-spacing: 0.05em;
+    line-height: 1.25em;
+    font-size: 1em;
+    font-family: $paragraphFont;
+    color: $paragraphBlack;
+    font-weight: normal;
+}

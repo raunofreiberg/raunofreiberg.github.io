@@ -1,0 +1,75 @@
+.card {
+    margin: 120px auto;
+    width: 80vw;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    height: 500px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
+    background: white;
+    img {
+        height: 100%;
+        flex-basis: 65%;
+        object-fit: cover;
+    }
+    &__content {
+        height: 100%;
+        flex: 1;
+        background: white;
+        h1 {
+            font-family: $headlineFont;
+            max-width: 600px;
+            margin: 70px auto;
+            font-weight: 200;
+            font-size: 3em;
+            text-align: center;
+            position: relative;
+            &:before {
+                content: 'Development';
+                position: absolute;
+                color: #cecece;
+                font-weight: 300;
+                width: 130px;
+                height: 25px;
+                font-family: $paragraphFont;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 14px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                top: -40px;
+            }
+        }
+        p {
+            @include paragraphStyles();
+            max-width: 430px;
+            margin: 70px auto;
+            color: $cardGrey;
+            font-weight: 300;
+        }
+        p:nth-of-type(2) {
+            margin-top: -30px;
+        }
+        &-separator {
+            width: 18px;
+            height: 18px;
+            border: 2px solid $grey;
+            border-radius: 50%;
+            margin: -40px auto;
+            display: block;
+            position: relative;
+            &:after {
+                content: '';
+                @include position(absolute, 8px 0 null -8px);
+                margin: auto;
+                height: 2px;
+                width: 36px;
+                background: $grey;
+            }
+        }
+        &-btn {
+            @include Button;
+            margin: 0 auto;
+        }
+    }
+}

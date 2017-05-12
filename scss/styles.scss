@@ -1,6 +1,8 @@
 @import './libraries/bourbon/_bourbon.scss';
 @import '1-base/_breakpoints';
 @import '1-base/_variables';
+@import '1-base/_mixins';
+@import '2-includes/_portfolio.scss';
 body {
     margin: 0;
     padding: 0;
@@ -37,9 +39,38 @@ body {
                 position: absolute;
                 width: 100%;
                 height: 60vh;
+                animation: fadeInText 1.4s ease-in-out;
                 //background: rgba(0, 0, 255, 0.35);
                 @include breakpoint(xs) {
                     width: 120%;
+                }
+                .letter__path {
+                    stroke-dasharray: 6231 6233;
+                    stroke-dashoffset: 6232;
+                    fill: url(#img1);
+                    animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s;
+                }
+                @keyframes draw {
+                    100% {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                @keyframes fade {
+                    0% {
+                        stroke-opacity: 0.90;
+                        opacity: .95;
+                        fill: none;
+                        stroke: #222;
+                    }
+                    93.93939393939394% {
+                        stroke-opacity: 0.35;
+                        opacity: .95;
+                    }
+                    100% {
+                        stroke-opacity: 0;
+                        opacity: 1;
+                        fill: url(#img1)
+                    }
                 }
             }
         }
@@ -57,12 +88,13 @@ body {
             font-weight: 600;
             margin: 0;
             @include position(absolute, 75px null null null);
+            animation: fadeInText 1.4s ease-in-out;
             &:after {
                 content: 'Front-end developer';
                 font-family: $paragraphFont;
                 font-size: 16px;
                 width: 230px;
-                color: #c3c3c3;
+                color: $grey;
                 text-transform: uppercase;
                 position: absolute;
                 left: -3px;
@@ -73,41 +105,24 @@ body {
             }
         }
         p {
-            font-family: $paragraphFont;
-            color: #333;
-            font-weight: normal;
+            @include paragraphStyles();
             max-width: 400px;
             width: 350px;
-            letter-spacing: 0.05em;
-            line-height: 1.25em;
-            font-size: 1em;
             @include position(absolute, null null 50px null);
+            animation: fadeInText 1.4s ease-in-out;
         }
         .main__copy-btn {
-            border: 3px solid #111;
-            width: 170px;
-            height: 40px;
-            line-height: 40px;
-            font-size: 14px;
-            font-family: $paragraphFont;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            text-align: center;
-            @include transition(all 0.2s ease-in-out);
+            @include Button();
             @include position(absolute, null null -20px null);
-            &:hover {
-                background: #111;
-                color: #fff;
-                cursor: pointer;
-            }
+            animation: fadeInText 1.4s ease-in-out;
         }
     }
     &-social__links {
-        display: block;        
+        display: block;
         position: absolute;
-        right: 20px;        
+        right: 20px;
         text-align: center;
-        bottom: 20px;        
+        bottom: 20px;
         width: 200px;
         padding: 0;
         li {
@@ -121,13 +136,28 @@ body {
                 z-index: 1;
                 position: relative;
                 height: 36px;
-                display: block;                              
+                display: block;
                 svg {
                     width: 18px;
                     height: 18px;
                 }
             }
         }
+    }
+    &-contact {
+        @include position(absolute, 20px 0 null 0);
+        margin: auto;
+        width: 290px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 1.5em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #111;
+        font-family: $paragraphFont;
+        font-weight: 300;
+        font-size: 20px;
     }
 }
 
@@ -151,5 +181,14 @@ body {
         .main__copy-btn {
             bottom: 50px;
         }
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

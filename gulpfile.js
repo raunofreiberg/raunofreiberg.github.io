@@ -13,7 +13,7 @@ var sass = require('gulp-sass');
 *  3. Your CSS stylesheets will live in the stylesheets/ directory at the root of your project
 */
 gulp.task('sass', function() {
-  gulp.src('scss/*.scss')
+  gulp.src('scss/**/*.scss')
     .pipe(sass())
     .on('error', function (err) {
             console.log(err.toString());
@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 
 // define the gulp task that will watch for changes in your sass
 gulp.task('watch', function() {
-  gulp.watch('scss/*.scss', ['sass']);
+  gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 // define the default gulp task
