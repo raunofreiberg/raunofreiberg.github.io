@@ -106,7 +106,7 @@ body {
 }
 
 @include breakpoint(xxs) {
-    .main__container-svg {
+    .main__container-svg__container {
         display: none;
     }
 }
