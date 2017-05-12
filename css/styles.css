@@ -115,6 +115,6 @@ body {
         color: #fff;
         cursor: pointer; }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .main__container-svg__container {
     display: none; } }
