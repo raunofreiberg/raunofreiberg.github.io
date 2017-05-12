@@ -66,14 +66,14 @@ body {
       max-width: 260px;
       font-size: 5em;
       letter-spacing: 0.05em;
-      font-family: "Playfair Display";
+      font-family: "Playfair Display", serif;
       font-weight: 600;
       margin: 0;
       position: absolute;
       top: 75px; }
       .main__container-copy h1:after {
         content: 'Front-end developer';
-        font-family: "Lato";
+        font-family: "Lato", sans-serif;
         font-size: 16px;
         width: 230px;
         color: #c3c3c3;
@@ -85,7 +85,7 @@ body {
         font-weight: 300;
         letter-spacing: 0.1em; }
     .main__container-copy p {
-      font-family: "Lato";
+      font-family: "Lato", sans-serif;
       color: #333;
       font-weight: normal;
       max-width: 400px;
@@ -101,7 +101,7 @@ body {
       height: 40px;
       line-height: 40px;
       font-size: 14px;
-      font-family: "Lato";
+      font-family: "Lato", sans-serif;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       text-align: center;
