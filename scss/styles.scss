@@ -7,7 +7,7 @@ body {
 }
 
 .main__container {
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -18,7 +18,7 @@ body {
         height: 50px;
         width: 150px;
         position: absolute;
-        left: 30px;
+        left: 20px;
         margin: 20px;
         @include align-self(flex-start);
     }
@@ -45,10 +45,10 @@ body {
         }
     }
     &-copy {
-        max-width: 300px;        
+        max-width: 300px;
         position: relative;
-        height: 400px;        
-        left: 10%;                
+        height: 400px;
+        left: 10%;
         h1 {
             max-width: 260px;
             font-size: 5em;
@@ -65,7 +65,7 @@ body {
                 color: #c3c3c3;
                 text-transform: uppercase;
                 position: absolute;
-                left: 0;
+                left: -3px;
                 bottom: -10px;
                 padding-left: 5px;
                 font-weight: 300;
@@ -81,7 +81,7 @@ body {
             letter-spacing: 0.05em;
             line-height: 1.25em;
             font-size: 1em;
-            @include position(absolute, null null 60px null);
+            @include position(absolute, null null 50px null);
         }
         .main__copy-btn {
             border: 3px solid #111;
@@ -94,11 +94,38 @@ body {
             text-transform: uppercase;
             text-align: center;
             @include transition(all 0.2s ease-in-out);
-            @include position(absolute, null null 0 null);
+            @include position(absolute, null null -20px null);
             &:hover {
                 background: #111;
                 color: #fff;
                 cursor: pointer;
+            }
+        }
+    }
+    &-social__links {
+        display: block;        
+        position: absolute;
+        right: 20px;        
+        text-align: center;
+        bottom: 20px;        
+        width: 200px;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            a {
+                width: 36px;
+                z-index: 1;
+                position: relative;
+                height: 36px;
+                display: block;                              
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
             }
         }
     }
@@ -107,5 +134,21 @@ body {
 @include breakpoint(xxs) {
     .main__container-svg__container {
         display: none;
+    }
+    .main__container-social__links {
+        left: 0;
+        height: 0;
+    }
+    .main__container-copy {
+        p {
+            width: 300px;
+            bottom: 130px;
+        }
+        h1 {
+            top: 0;
+        }
+        .main__copy-btn {
+            bottom: 50px;
+        }
     }
 }
