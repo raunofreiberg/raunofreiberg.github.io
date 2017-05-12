@@ -11,13 +11,16 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    @include display(flex);
+    @include align-items(center);
     &-logo {
         line-height: 50px;
+        height: 50px;
         width: 150px;
         position: absolute;
         left: 30px;
-        margin: 20px 0;
-        height: 50px;
+        margin: 20px;
+        @include align-self(flex-start);
     }
     &-svg__container {
         width: 100%;
@@ -42,14 +45,10 @@ body {
         }
     }
     &-copy {
-        max-width: 300px;
-        padding-left: 200px;
+        max-width: 300px;        
         position: relative;
-        height: 400px;
-        top: 50%;
-        left: 10%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
+        height: 400px;        
+        left: 10%;                
         h1 {
             max-width: 260px;
             font-size: 5em;
