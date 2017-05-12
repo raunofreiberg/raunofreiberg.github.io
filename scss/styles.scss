@@ -1,0 +1,112 @@
+@import './libraries/bourbon/_bourbon.scss';
+@import '1-base/_breakpoints';
+@import '1-base/_variables';
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main__container {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &-logo {
+        line-height: 50px;
+        width: 150px;
+        position: absolute;
+        left: 30px;
+        margin: 20px 0;
+        height: 50px;
+    }
+    &-svg__container {
+        width: 100%;
+        position: absolute;
+        @include display(flex);
+        @include justify-content(center);
+        @include align-items(center);
+        height: 100vh;
+        //background: rgba(255, 0, 0, 0.25);
+        .svg__container-svg {
+            width: 100%;
+            height: 60vh;
+            svg {
+                position: absolute;
+                width: 100%;
+                height: 60vh;
+                //background: rgba(0, 0, 255, 0.35);
+                @include breakpoint(xs) {
+                    width: 120%;
+                }
+            }
+        }
+    }
+    &-copy {
+        max-width: 300px;
+        padding-left: 200px;
+        position: relative;
+        height: 400px;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        h1 {
+            max-width: 260px;
+            font-size: 5em;
+            letter-spacing: 0.05em;
+            font-family: $headlineFont;
+            font-weight: 600;
+            margin: 0;
+            @include position(absolute, 75px null null null);
+            &:after {
+                content: 'Front-end developer';
+                font-family: $paragraphFont;
+                font-size: 16px;
+                width: 230px;
+                color: #c3c3c3;
+                text-transform: uppercase;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                padding-left: 5px;
+                font-weight: 200;
+                letter-spacing: 0.1em;
+            }
+        }
+        p {
+            font-family: $paragraphFont;
+            color: #333;
+            font-weight: normal;
+            max-width: 400px;
+            width: 350px;
+            letter-spacing: 0.05em;
+            line-height: 1.25em;
+            font-size: 1em;
+            @include position(absolute, null null 60px null);
+        }
+        .main__copy-btn {
+            border: 3px solid #111;
+            width: 170px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-family: $paragraphFont;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: center;
+            @include transition(all 0.2s ease-in-out);
+            @include position(absolute, null null 0 null);
+            &:hover {
+                background: #111;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include breakpoint(xxs) {
+    .main__container-svg {
+        display: none;
+    }
+}

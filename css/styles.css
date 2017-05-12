@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.main__container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+  .main__container-logo {
+    line-height: 50px;
+    width: 150px;
+    position: absolute;
+    left: 30px;
+    margin: 20px 0;
+    height: 50px; }
+  .main__container-svg__container {
+    width: 100%;
+    position: absolute;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    height: 100vh; }
+    .main__container-svg__container .svg__container-svg {
+      width: 100%;
+      height: 60vh; }
+      .main__container-svg__container .svg__container-svg svg {
+        position: absolute;
+        width: 100%;
+        height: 60vh; }
+        @media (max-width: 1300px) {
+          .main__container-svg__container .svg__container-svg svg {
+            width: 120%; } }
+  .main__container-copy {
+    max-width: 300px;
+    padding-left: 200px;
+    position: relative;
+    height: 400px;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+    .main__container-copy h1 {
+      max-width: 260px;
+      font-size: 5em;
+      letter-spacing: 0.05em;
+      font-family: "Playfair Display";
+      font-weight: 600;
+      margin: 0;
+      position: absolute;
+      top: 75px; }
+      .main__container-copy h1:after {
+        content: 'Front-end developer';
+        font-family: "Lato";
+        font-size: 16px;
+        width: 230px;
+        color: #c3c3c3;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        padding-left: 5px;
+        font-weight: 200;
+        letter-spacing: 0.1em; }
+    .main__container-copy p {
+      font-family: "Lato";
+      color: #333;
+      font-weight: normal;
+      max-width: 400px;
+      width: 350px;
+      letter-spacing: 0.05em;
+      line-height: 1.25em;
+      font-size: 1em;
+      position: absolute;
+      bottom: 60px; }
+    .main__container-copy .main__copy-btn {
+      border: 3px solid #111;
+      width: 170px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      font-family: "Lato";
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      bottom: 0; }
+      .main__container-copy .main__copy-btn:hover {
+        background: #111;
+        color: #fff;
+        cursor: pointer; }
+
+@media (max-width: 900px) {
+  .main__container-svg {
+    display: none; } }
