@@ -74,8 +74,8 @@
         right: 0;
         top: -40px; }
     .card__content p {
-      letter-spacing: 0.05em;
-      line-height: 1.25em;
+      letter-spacing: 0.1em;
+      line-height: 1.5em;
       font-size: 1em;
       font-family: "Lato", sans-serif;
       color: #333;
@@ -105,7 +105,7 @@
         width: 36px;
         background: #c3c3c3; }
     .card__content-btn {
-      border: 3px solid #111;
+      border: 3px solid #222;
       width: 170px;
       height: 40px;
       line-height: 40px;
@@ -119,7 +119,7 @@
       transition: all 0.2s ease-in-out;
       margin: 0 auto; }
       .card__content-btn:hover {
-        background: #111;
+        background: #222;
         color: #fff;
         cursor: pointer; }
 
@@ -153,8 +153,7 @@ body {
     height: 50px;
     width: 150px;
     position: absolute;
-    left: 20px;
-    margin: 20px;
+    margin: 20px 30px;
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     align-self: flex-start;
@@ -218,7 +217,7 @@ body {
       font-weight: 600;
       margin: 0;
       position: absolute;
-      top: 75px;
+      top: 80px;
       animation: fadeInText 1.4s ease-in-out; }
       .main__container-copy h1:after {
         content: 'Front-end developer';
@@ -234,8 +233,8 @@ body {
         font-weight: 300;
         letter-spacing: 0.1em; }
     .main__container-copy p {
-      letter-spacing: 0.05em;
-      line-height: 1.25em;
+      letter-spacing: 0.1em;
+      line-height: 1.5em;
       font-size: 1em;
       font-family: "Lato", sans-serif;
       color: #333;
@@ -243,10 +242,10 @@ body {
       max-width: 400px;
       width: 350px;
       position: absolute;
-      bottom: 50px;
+      bottom: 30px;
       animation: fadeInText 1.4s ease-in-out; }
     .main__container-copy .main__copy-btn {
-      border: 3px solid #111;
+      border: 3px solid #222;
       width: 170px;
       height: 40px;
       line-height: 40px;
@@ -259,10 +258,10 @@ body {
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       position: absolute;
-      bottom: -20px;
+      bottom: -30px;
       animation: fadeInText 1.4s ease-in-out; }
       .main__container-copy .main__copy-btn:hover {
-        background: #111;
+        background: #222;
         color: #fff;
         cursor: pointer; }
   .main__container-social__links {
@@ -293,25 +292,78 @@ body {
     top: 20px;
     right: 0;
     left: 0;
-    margin: auto;
-    width: 290px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    letter-spacing: 1.5em;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1em;
     text-transform: uppercase;
     text-decoration: none;
-    color: #111;
+    text-align: center;
+    color: #222;
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 20px;
-    animation: fadeInText 1.4s ease-in-out; }
+    z-index: 2;
+    animation: fadeInText 1.4s ease-in-out;
+    margin: auto;
+    width: 450px;
+    height: 40px;
+    line-height: 40px; }
+    @media (max-width: 768px) {
+      .main__container-contact {
+        display: none; } }
+    .main__container-contact:hover {
+      letter-spacing: 1.75em; }
+    @media (max-width: 1250px) {
+      .main__container-contact {
+        left: auto;
+        right: -60px; } }
+  .main__container-portfolio {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    z-index: 2;
+    animation: fadeInText 1.4s ease-in-out;
+    position: absolute;
+    right: -130px;
+    transform: rotate(90deg);
+    width: 360px;
+    height: 30px; }
+    @media (max-width: 768px) {
+      .main__container-portfolio {
+        display: none; } }
+    .main__container-portfolio:hover {
+      letter-spacing: 1.75em; }
+  .main__container-mobile__nav {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    display: none; }
+    .main__container-mobile__nav span {
+      background: #222;
+      width: 24px;
+      height: 2px;
+      display: block;
+      margin-top: 7px; }
+      .main__container-mobile__nav span:nth-of-type(2) {
+        width: 18px;
+        margin-left: 5px; }
 
 @media (max-width: 768px) {
   .main__container-svg__container {
     display: none; }
   .main__container-social__links {
-    left: 7px;
+    left: 0;
     height: 0;
     bottom: 50px; }
   .main__container-copy p {
@@ -320,4 +372,6 @@ body {
   .main__container-copy h1 {
     top: 0; }
   .main__container-copy .main__copy-btn {
-    bottom: 50px; } }
+    bottom: 50px; }
+  .main__container-mobile__nav {
+    display: block; } }

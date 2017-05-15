@@ -1,5 +1,5 @@
 @mixin Button() {
-    border: 3px solid #111;
+    border: 3px solid #222;
     width: 170px;
     height: 40px;
     line-height: 40px;
@@ -10,17 +10,37 @@
     text-align: center;
     @include transition(all 0.2s ease-in-out);
     &:hover {
-        background: #111;
+        background: #222;
         color: #fff;
         cursor: pointer;
     }
 }
 
 @mixin paragraphStyles() {
-    letter-spacing: 0.05em;
-    line-height: 1.25em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
     font-size: 1em;
     font-family: $paragraphFont;
     color: $paragraphBlack;
     font-weight: normal;
+}
+
+@mixin linkStyles() {
+    @include transition(all 0.2s ease-in-out);
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    font-family: $paragraphFont;
+    font-weight: 300;
+    font-size: 20px;
+    z-index: 2;
+    animation: fadeInText 1.4s ease-in-out;
+    @include breakpoint(xxs) {
+        display: none;
+    }
+    &:hover {
+        letter-spacing: 1.75em;
+    }
 }

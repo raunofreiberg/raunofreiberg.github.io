@@ -9,6 +9,11 @@
             @content;
         }
     }
+    @else if $class=1250 {
+        @media (max-width: 1250px) {
+            @content;
+        }
+    }
     @else if $class=1500 {
         @media (max-width: 1500px) {
             @content;
