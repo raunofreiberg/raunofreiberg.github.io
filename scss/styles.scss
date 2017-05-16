@@ -134,6 +134,7 @@ body {
         margin: auto;
         width: 450px;
         height: 40px;
+        background: white;
         line-height: 40px;
         @include breakpoint(1250) {
             left: auto;
@@ -148,9 +149,9 @@ body {
         width: 360px;
         height: 30px;
     }
-    &-home {
+    &-portfolio__contact {
        @include linkStyles();
-        @include position(fixed, 50% -130px null null);
+        @include position(fixed, 50% -145px null null);
         transform: rotate(90deg);
         width: 360px;
         height: 30px;
