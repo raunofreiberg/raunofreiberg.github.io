@@ -16,6 +16,7 @@
     "gulp-sass": "^3.1.0"
   },
   "devDependencies": {
-    "gulp-plumber": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "gulp-slim": "^0.3.0"
   }
 }

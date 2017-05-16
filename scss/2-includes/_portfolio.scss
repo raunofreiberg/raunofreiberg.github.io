@@ -1,24 +1,47 @@
 .card {
-    margin: 120px auto;
-    width: 80vw;
+    margin: 60px auto;
+    width: 90vw;
     @include display(flex);
     @include flex-wrap(wrap);
-    height: 500px;
+    height: auto;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
     background: white;
-    img {
-        height: 100%;
-        flex-basis: 65%;
-        object-fit: cover;
+    animation: fadeInText 1s ease-in-out;
+    .img {        
+        flex-basis: 60%;        
+        background-size: cover;
+        background-position: center center;
+        height: 580px;
+        @include breakpoint(1150) {
+            flex-basis: 100%;
+            height: 250px;
+        }
+        &.gradientTool {
+            background-image: url('../img/gradient.png');
+        }
+        &.moviesApp {
+            background-image: url('../img/movies.png');
+            order: 1;
+            @include breakpoint(xs) {
+                order: 0;
+            }
+        }
+        &.alexPortfolio {
+            background-image: url('../img/alex.png')            
+        }
     }
     &__content {
         height: 100%;
         flex: 1;
         background: white;
+        padding: 20px 40px;
+        @include breakpoint(1150) {
+            padding: 20px;
+        }
         h1 {
             font-family: $headlineFont;
             max-width: 600px;
-            margin: 70px auto;
+            margin: 50px auto;
             font-weight: 200;
             font-size: 3em;
             text-align: center;
@@ -37,25 +60,26 @@
                 margin: auto;
                 left: 0;
                 right: 0;
-                top: -40px;
+                top: -25px;
             }
         }
         p {
             @include paragraphStyles();
             max-width: 430px;
             margin: 70px auto;
+            margin-bottom: 30px;
             color: $cardGrey;
             font-weight: 300;
         }
         p:nth-of-type(2) {
-            margin-top: -30px;
+           margin: 15px auto;
         }
         &-separator {
             width: 18px;
             height: 18px;
             border: 2px solid $grey;
             border-radius: 50%;
-            margin: -40px auto;
+            margin: -35px auto;
             display: block;
             position: relative;
             &:after {
@@ -69,7 +93,11 @@
         }
         &-btn {
             @include Button;
-            margin: 0 auto;
+            margin: 50px auto 0;  
+            a {
+                text-decoration: none;
+                color: inherit;
+            }   
         }
     }
 }

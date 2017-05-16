@@ -10,25 +10,29 @@
 
 @keyframes fade {
   0% {
-    stroke-opacity: 0.80;
+    stroke-opacity: 0.90;
     fill: none;
+    opacity: .95;
     stroke: #222; }
-  30% {
-    fill-opacity: 0.5;
-    stroke-opacity: 0.5; }
-  50% {
-    fill-opacity: 1;
-    stroke-opacity: 0.3; }
   93.93939393939394% {
-    stroke-opacity: 0.15; }
+    stroke-opacity: 0.35;
+    opacity: .95; }
   100% {
     stroke-opacity: 0;
-    fill: url(#img1);
+    opacity: 1;
+    fill: url(#img1); } }
+
+@keyframes fadeImg {
+  30% {
+    fill-opacity: 0.1; }
+  50% {
+    fill-opacity: 1; }
+  100% {
     fill-opacity: 1; } }
 
 .card {
-  margin: 120px auto;
-  width: 80vw;
+  margin: 60px auto;
+  width: 90vw;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -43,21 +47,41 @@
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 500px;
+  height: auto;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
-  background: white; }
-  .card img {
-    height: 100%;
-    flex-basis: 65%;
-    object-fit: cover; }
+  background: white;
+  animation: fadeInText 1s ease-in-out; }
+  .card .img {
+    flex-basis: 60%;
+    background-size: cover;
+    background-position: center center;
+    height: 580px; }
+    @media (max-width: 1150px) {
+      .card .img {
+        flex-basis: 100%;
+        height: 250px; } }
+    .card .img.gradientTool {
+      background-image: url("../img/gradient.png"); }
+    .card .img.moviesApp {
+      background-image: url("../img/movies.png");
+      order: 1; }
+      @media (max-width: 1300px) {
+        .card .img.moviesApp {
+          order: 0; } }
+    .card .img.alexPortfolio {
+      background-image: url("../img/alex.png"); }
   .card__content {
     height: 100%;
     flex: 1;
-    background: white; }
+    background: white;
+    padding: 20px 40px; }
+    @media (max-width: 1150px) {
+      .card__content {
+        padding: 20px; } }
     .card__content h1 {
       font-family: "Playfair Display", serif;
       max-width: 600px;
-      margin: 70px auto;
+      margin: 50px auto;
       font-weight: 200;
       font-size: 3em;
       text-align: center;
@@ -76,7 +100,7 @@
         margin: auto;
         left: 0;
         right: 0;
-        top: -40px; }
+        top: -25px; }
     .card__content p {
       letter-spacing: 0.1em;
       line-height: 1.5em;
@@ -86,16 +110,17 @@
       font-weight: normal;
       max-width: 430px;
       margin: 70px auto;
+      margin-bottom: 30px;
       color: #838383;
       font-weight: 300; }
     .card__content p:nth-of-type(2) {
-      margin-top: -30px; }
+      margin: 15px auto; }
     .card__content-separator {
       width: 18px;
       height: 18px;
       border: 2px solid #c3c3c3;
       border-radius: 50%;
-      margin: -40px auto;
+      margin: -35px auto;
       display: block;
       position: relative; }
       .card__content-separator:after {
@@ -121,11 +146,14 @@
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
-      margin: 0 auto; }
+      margin: 50px auto 0; }
       .card__content-btn:hover {
         background: #222;
         color: #fff;
         cursor: pointer; }
+      .card__content-btn a {
+        text-decoration: none;
+        color: inherit; }
 
 body {
   margin: 0;
@@ -207,7 +235,7 @@ body {
           stroke-dasharray: 6231 6233;
           stroke-dashoffset: 6232;
           fill: url(#img1);
-          animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s; }
+          animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s, fadeImg 6.1s; }
   .main__container-copy {
     max-width: 300px;
     position: relative;
@@ -268,6 +296,9 @@ body {
         background: #222;
         color: #fff;
         cursor: pointer; }
+      .main__container-copy .main__copy-btn a {
+        text-decoration: none;
+        color: inherit; }
   .main__container-social__links {
     display: block;
     position: absolute;
@@ -318,7 +349,7 @@ body {
         display: none; } }
     .main__container-contact:hover {
       letter-spacing: 1.75em; }
-    @media (max-width: 1250px) {
+    @media (max-width: 1150px) {
       .main__container-contact {
         left: auto;
         right: -60px; } }
@@ -352,6 +383,7 @@ body {
     position: absolute;
     top: 30px;
     right: 15px;
+    animation: fadeInText 1.4s ease-in-out;
     display: none; }
     .main__container-mobile__nav span {
       background: #222;

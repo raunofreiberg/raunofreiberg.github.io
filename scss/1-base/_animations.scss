@@ -15,24 +15,30 @@
 
 @keyframes fade {
     0% {
-        stroke-opacity: 0.80;
-        fill: none;        
+        stroke-opacity: 0.90;
+        fill: none;
+        opacity: .95;
         stroke: #222;
     }
-    30% {
-        fill-opacity: 0.5;
-        stroke-opacity: 0.5;
-    }
-    50% {
-        fill-opacity: 1;
-        stroke-opacity: 0.3;
-    }
     93.93939393939394% {
-        stroke-opacity: 0.15;
+        stroke-opacity: 0.35;
+        opacity: .95;
     }
     100% {
         stroke-opacity: 0;
+        opacity: 1;
         fill: url(#img1);
+    }
+}
+
+@keyframes fadeImg {
+    30% {
+        fill-opacity: 0.1;
+    }
+    50% {
+        fill-opacity: 1;
+    }
+    100% {
         fill-opacity: 1;
     }
 }
