@@ -73,15 +73,15 @@
         flex-basis: 100%;
         height: 250px; } }
     .card .img.gradientTool {
-      background-image: url("../img/gradient.png"); }
+      background-image: url("../img/gradient.jpg"); }
     .card .img.moviesApp {
-      background-image: url("../img/movies.png");
+      background-image: url("../img/movies.jpg");
       order: 1; }
       @media (max-width: 1300px) {
         .card .img.moviesApp {
           order: 0; } }
     .card .img.alexPortfolio {
-      background-image: url("../img/alex.png");
+      background-image: url("../img/alex.jpg");
       background-position: top center; }
   .card__content {
     height: 100%;
