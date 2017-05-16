@@ -48,14 +48,13 @@
             text-align: center;
             position: relative;
             &:before {
-                content: 'Development';
+                content: 'DEVELOPMENT';
                 position: absolute;
                 color: #cecece;
                 font-weight: 300;
                 width: 150px;
                 height: 25px;
-                font-family: $paragraphFont;
-                ;
+                font-family: $paragraphFont;                
                 letter-spacing: 0.3em;
                 font-size: 14px;
                 margin: auto;
@@ -68,6 +67,7 @@
             @include paragraphStyles();
             max-width: 430px;
             margin: 70px auto;
+            text-align: center;
             margin-bottom: 30px;
             color: $cardGrey;
             font-weight: 300;

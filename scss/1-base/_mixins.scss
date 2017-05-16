@@ -6,7 +6,6 @@
     font-size: 14px;
     font-family: $paragraphFont;
     letter-spacing: 0.2em;
-    ;
     text-align: center;
     @include transition(all 0.2s ease-in-out);
     &:hover {
@@ -27,8 +26,7 @@
 
 @mixin linkStyles() {
     @include transition(all 0.2s ease-in-out);
-    letter-spacing: 1em;
-    ;
+    letter-spacing: 1em;    
     text-decoration: none;
     text-align: center;
     color: #222;
