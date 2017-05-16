@@ -137,7 +137,8 @@ body {
         line-height: 40px;
         @include breakpoint(1250) {
             left: auto;
-            right: -60px;
+            right: 90px;
+            width: 250px;
         }
     }
     &-portfolio {
@@ -146,6 +147,15 @@ body {
         transform: rotate(90deg);
         width: 360px;
         height: 30px;
+    }
+    &-home {
+       @include linkStyles();
+        @include position(fixed, 50% -130px null null);
+        transform: rotate(90deg);
+        width: 360px;
+        height: 30px;
+
+
     }
     &-mobile__nav {
         @include size(50px);

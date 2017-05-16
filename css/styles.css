@@ -31,7 +31,7 @@
     fill-opacity: 1; } }
 
 .card {
-  margin: 60px auto;
+  margin: 80px auto;
   width: 90vw;
   display: -webkit-box;
   display: -moz-box;
@@ -154,6 +154,8 @@
       .card__content-btn a {
         text-decoration: none;
         color: inherit; }
+    .card__content:nth-of-type(3) {
+      padding-top: 90px; }
 
 body {
   margin: 0;
@@ -336,7 +338,7 @@ body {
     text-align: center;
     color: #222;
     font-family: "Lato", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
@@ -352,7 +354,8 @@ body {
     @media (max-width: 1150px) {
       .main__container-contact {
         left: auto;
-        right: -60px; } }
+        right: 90px;
+        width: 250px; } }
   .main__container-portfolio {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -363,7 +366,7 @@ body {
     text-align: center;
     color: #222;
     font-family: "Lato", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
@@ -376,6 +379,31 @@ body {
       .main__container-portfolio {
         display: none; } }
     .main__container-portfolio:hover {
+      letter-spacing: 1.75em; }
+  .main__container-home {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    z-index: 2;
+    animation: fadeInText 1.4s ease-in-out;
+    position: fixed;
+    top: 50%;
+    right: -130px;
+    transform: rotate(90deg);
+    width: 360px;
+    height: 30px; }
+    @media (max-width: 768px) {
+      .main__container-home {
+        display: none; } }
+    .main__container-home:hover {
       letter-spacing: 1.75em; }
   .main__container-mobile__nav {
     height: 50px;

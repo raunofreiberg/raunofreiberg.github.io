@@ -1,5 +1,5 @@
 .card {
-    margin: 60px auto;
+    margin: 80px auto;
     width: 90vw;
     @include display(flex);
     @include flex-wrap(wrap);
@@ -98,6 +98,9 @@
                 text-decoration: none;
                 color: inherit;
             }   
+        }
+        &:nth-of-type(3) {
+            padding-top: 90px;
         }
     }
 }
