@@ -134,7 +134,7 @@ body {
             }
         }
     }
-    &-contact {
+    &-portfolio {
         @include position(absolute, 20px 0 null 0);
         @include linkStyles();
         margin: auto;
@@ -147,20 +147,6 @@ body {
             right: 90px;
             width: 250px;
         }
-    }
-    &-portfolio {
-        @include linkStyles();
-        @include position(absolute, null -130px null null);
-        transform: rotate(90deg);
-        width: 360px;
-        height: 30px;
-    }
-    &-portfolio__contact {
-        @include linkStyles();
-        @include position(fixed, 50% -145px null null);
-        transform: rotate(90deg);
-        width: 360px;
-        height: 30px;
     }
     &-mobile__nav {
         @include size(50px);

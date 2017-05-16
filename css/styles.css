@@ -341,7 +341,7 @@ body {
         .main__container-social__links li a svg {
           width: 18px;
           height: 18px; }
-  .main__container-contact {
+  .main__container-portfolio {
     position: absolute;
     top: 20px;
     right: 0;
@@ -364,62 +364,15 @@ body {
     background: white;
     line-height: 40px; }
     @media (max-width: 768px) {
-      .main__container-contact {
-        display: none; } }
-    .main__container-contact:hover {
-      letter-spacing: 1.75em; }
-    @media (max-width: 1150px) {
-      .main__container-contact {
-        left: auto;
-        right: 90px;
-        width: 250px; } }
-  .main__container-portfolio {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    letter-spacing: 1em;
-    text-decoration: none;
-    text-align: center;
-    color: #222;
-    font-family: "Lato", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    z-index: 2;
-    animation: fadeInText 1.4s ease-in-out;
-    position: absolute;
-    right: -130px;
-    transform: rotate(90deg);
-    width: 360px;
-    height: 30px; }
-    @media (max-width: 768px) {
       .main__container-portfolio {
         display: none; } }
     .main__container-portfolio:hover {
       letter-spacing: 1.75em; }
-  .main__container-portfolio__contact {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    letter-spacing: 1em;
-    text-decoration: none;
-    text-align: center;
-    color: #222;
-    font-family: "Lato", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    z-index: 2;
-    animation: fadeInText 1.4s ease-in-out;
-    position: fixed;
-    top: 50%;
-    right: -145px;
-    transform: rotate(90deg);
-    width: 360px;
-    height: 30px; }
-    @media (max-width: 768px) {
-      .main__container-portfolio__contact {
-        display: none; } }
-    .main__container-portfolio__contact:hover {
-      letter-spacing: 1.75em; }
+    @media (max-width: 1150px) {
+      .main__container-portfolio {
+        left: auto;
+        right: 90px;
+        width: 250px; } }
   .main__container-mobile__nav {
     height: 50px;
     width: 50px;
