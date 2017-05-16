@@ -18,7 +18,7 @@ gulp.task('slim', () => {
     .pipe(slim({
       pretty: true
     }))
-    .pipe(gulp.dest("./portfolio/"));
+    .pipe(gulp.dest("./"));
 });
 
 
