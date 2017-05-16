@@ -7,8 +7,8 @@
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
     background: white;
     animation: fadeInText 1s ease-in-out;
-    .img {        
-        flex-basis: 60%;        
+    .img {
+        flex-basis: 60%;
         background-size: cover;
         background-position: center center;
         height: 580px;
@@ -27,7 +27,7 @@
             }
         }
         &.alexPortfolio {
-            background-image: url('../img/alex.png')            
+            background-image: url('../img/alex.png')
         }
     }
     &__content {
@@ -72,7 +72,7 @@
             font-weight: 300;
         }
         p:nth-of-type(2) {
-           margin: 15px auto;
+            margin: 15px auto;
         }
         &-separator {
             width: 18px;
@@ -84,20 +84,21 @@
             position: relative;
             &:after {
                 content: '';
-                @include position(absolute, 8px 0 null -8px);
+                @include position(absolute,
+                8px 0 null -8px);
                 margin: auto;
                 height: 2px;
                 width: 36px;
                 background: $grey;
             }
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
         &-btn {
             @include Button;
-            margin: 50px auto 0;  
-            a {
-                text-decoration: none;
-                color: inherit;
-            }   
+            margin: 50px auto 0;
         }
         &:nth-of-type(3) {
             padding-top: 90px;

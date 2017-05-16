@@ -133,6 +133,9 @@
         height: 2px;
         width: 36px;
         background: #c3c3c3; }
+    .card__content a {
+      text-decoration: none;
+      color: inherit; }
     .card__content-btn {
       border: 3px solid #222;
       width: 170px;
@@ -151,9 +154,6 @@
         background: #222;
         color: #fff;
         cursor: pointer; }
-      .card__content-btn a {
-        text-decoration: none;
-        color: inherit; }
     .card__content:nth-of-type(3) {
       padding-top: 90px; }
 
