@@ -27,7 +27,8 @@
             }
         }
         &.alexPortfolio {
-            background-image: url('../img/alex.png')
+            background-image: url('../img/alex.png');
+            background-position: top center;
         }
     }
     &__content {
@@ -54,7 +55,7 @@
                 width: 150px;
                 height: 25px;
                 font-family: $paragraphFont;
-                text-transform: uppercase;
+                ;
                 letter-spacing: 0.3em;
                 font-size: 14px;
                 margin: auto;

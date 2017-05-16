@@ -9,7 +9,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700" rel="stylesheet">
 
+  <script>
+    (function () {
+      "use strict";
 
+      var fontHref = "https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:400,700";
+
+      if ((window.localStorage && localStorage.font_css_cache) || document.cookie.indexOf('font_css_cache') > -1) {
+        injectFontsStylesheet();
+      } else {
+        window.addEventListener('load', injectFontsStylesheet);
+      }
+
+      function fileIsCached(href) {
+        return window.localStorage && localStorage.font_css_cache && (localStorage.font_css_cache_file === href);
+      }
+
+      function injectFontsStylesheet() {
+        // if this is an older browser
+        if (!window.localStorage || !window.XMLHttpRequest) {
+          var stylesheet = document.createElement('link');
+          stylesheet.href = fontHref;
+          stylesheet.rel = 'stylesheet';
+          stylesheet.type = 'text/css';
+          document.getElementsByTagName('head')[0].appendChild(stylesheet);
+          // just use the native browser cache
+          // this requires a good expires header on the server
+          document.cookie = "font_css_cache";
+
+          // if this isn't an old browser
+        } else {
+          // use the cached version if we already have it
+          if (fileIsCached(fontHref)) {
+            injectRawStyle(localStorage.font_css_cache);
+            // otherwise, load it with ajax
+          } else {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", fontHref, true);
+            // cater for IE8 which does not support addEventListener or attachEvent on XMLHttpRequest
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                // once we have the content, quickly inject the css rules
+                injectRawStyle(xhr.responseText);
+                // and cache the text content for further use
+                // notice that this overwrites anything that might have already been previously cached
+                localStorage.font_css_cache = xhr.responseText;
+                localStorage.font_css_cache_file = fontHref;
+              }
+            };
+            xhr.send();
+          }
+        }
+      }
+      // this is the simple utitily that injects the cached or loaded css text
+      function injectRawStyle(text) {
+        var style = document.createElement('style');
+        // cater for IE8 which doesn't support style.innerHTML
+        style.setAttribute("type", "text/css");
+        if (style.styleSheet) {
+          style.styleSheet.cssText = text;
+        } else {
+          style.innerHTML = text;
+        }
+        document.getElementsByTagName('head')[0].appendChild(style);
+      }
+    }());
+  </script>
 </head>
 
 <body>
@@ -41,13 +106,36 @@
       </svg>
     </div>
 
-    <a href="http://google.com" class="main__container-contact">Contact</a>
-    <a href="portfolio" class="main__container-portfolio">Portfolio</a>
+    <a href="http://google.com" class="main__container-contact">CONTACT</a>
+    <a href="portfolio" class="main__container-portfolio">PORTFOLIO</a>
 
     <div class="main__container-mobile__nav">
       <span></span>
       <span></span>
       <span></span>
+    </div>
+
+    <div class="main__container-svg__container">
+      <div class="svg__container-svg">
+        <svg viewBox="0 -8 1600.279 690.518">
+          <defs>
+            <pattern id="img1" width="1" height="1">
+              <image xlink:href="img/1.jpg" width="100%" height="155%"></image>
+            </pattern>
+          </defs>
+          <path id="letter" d="M1448,729.618c-149.853-.979-129.286-.979-191.972-213.516-22.42-76.032-79.762-94.827-114.1-99.831h-69.053V618.942c0,67.582,26.445,95.986,67.581,95.986v14.69H888.747V714.926c42.115,0,65.622-27.424,65.622-101.858V416.27H0V399.778H954.37v-263.7c0-60.726-22.527-81.294-65.622-81.294V40.1h184.133V399.778h68.56v-.226C1225.672,396.616,1286.4,378,1286.4,227.172c0-151.812-62.684-169.442-144.956-172.38V41.079c171.4,2.936,279.138,33.3,279.138,186.091,0,126.347-75.416,168.462-186.092,178.257,63.663-1.957,139.079,22.527,186.092,218.414,19.586,74.435,84.231,89.127,109.7,91.086v14.691Z"
+            transform="translate(-350 -49.1)" class="letter__path"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="main__container-copy">
+      <h1>Rauno</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni rem asdna lorem ipsum doler. Lorem ipsum doler asdna
+        consterctur adipiscin elit. </p>
+      <a href="portfolio">
+        <div class="main__copy-btn">PORTFOLIO</div>
+      </a>
     </div>
 
 
@@ -89,28 +177,7 @@
 
     </ul>
 
-    <div class="main__container-svg__container">
-      <div class="svg__container-svg">
-        <svg viewBox="0 -8 1600.279 690.518">
-          <defs>
-            <pattern id="img1" width="1" height="1">
-              <image xlink:href="img/1.jpg" width="100%" height="155%"></image>
-            </pattern>
-          </defs>
-          <path id="letter" d="M1448,729.618c-149.853-.979-129.286-.979-191.972-213.516-22.42-76.032-79.762-94.827-114.1-99.831h-69.053V618.942c0,67.582,26.445,95.986,67.581,95.986v14.69H888.747V714.926c42.115,0,65.622-27.424,65.622-101.858V416.27H0V399.778H954.37v-263.7c0-60.726-22.527-81.294-65.622-81.294V40.1h184.133V399.778h68.56v-.226C1225.672,396.616,1286.4,378,1286.4,227.172c0-151.812-62.684-169.442-144.956-172.38V41.079c171.4,2.936,279.138,33.3,279.138,186.091,0,126.347-75.416,168.462-186.092,178.257,63.663-1.957,139.079,22.527,186.092,218.414,19.586,74.435,84.231,89.127,109.7,91.086v14.691Z"
-            transform="translate(-350 -49.1)" class="letter__path"></path>
-        </svg>
-      </div>
-    </div>
 
-    <div class="main__container-copy">
-      <h1>Rauno</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni rem asdna lorem ipsum doler. Lorem ipsum doler asdna
-        consterctur adipiscin elit. </p>
-      <a href="portfolio">
-        <div class="main__copy-btn">Portfolio</div>
-      </a>
-    </div>
 
   </div>
 

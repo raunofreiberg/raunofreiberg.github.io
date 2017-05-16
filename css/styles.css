@@ -81,7 +81,8 @@
         .card .img.moviesApp {
           order: 0; } }
     .card .img.alexPortfolio {
-      background-image: url("../img/alex.png"); }
+      background-image: url("../img/alex.png");
+      background-position: top center; }
   .card__content {
     height: 100%;
     flex: 1;
@@ -106,7 +107,6 @@
         width: 150px;
         height: 25px;
         font-family: "Lato", sans-serif;
-        text-transform: uppercase;
         letter-spacing: 0.3em;
         font-size: 14px;
         margin: auto;
@@ -156,7 +156,6 @@
       font-size: 14px;
       font-family: "Lato", sans-serif;
       letter-spacing: 0.2em;
-      text-transform: uppercase;
       text-align: center;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -270,12 +269,11 @@ body {
       animation: fadeInText 1.4s ease-in-out;
       -webkit-animation: fadeInText 1.4s ease-in-out; }
       .main__container-copy h1:after {
-        content: 'Front-end developer';
+        content: 'FRONT-END DEVELOPER';
         font-family: "Lato", sans-serif;
         font-size: 16px;
         width: 230px;
         color: #c3c3c3;
-        text-transform: uppercase;
         position: absolute;
         left: -3px;
         bottom: -10px;
@@ -306,7 +304,6 @@ body {
       font-size: 14px;
       font-family: "Lato", sans-serif;
       letter-spacing: 0.2em;
-      text-transform: uppercase;
       text-align: center;
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -352,7 +349,6 @@ body {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     letter-spacing: 1em;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     color: #222;
@@ -381,7 +377,6 @@ body {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     letter-spacing: 1em;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     color: #222;
@@ -405,7 +400,6 @@ body {
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     letter-spacing: 1em;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     color: #222;
