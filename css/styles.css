@@ -155,6 +155,7 @@
       height: 40px;
       line-height: 40px;
       font-size: 14px;
+      font-weight: bold;
       font-family: "Lato", sans-serif;
       letter-spacing: 0.2em;
       text-align: center;
@@ -303,6 +304,7 @@ body {
       height: 40px;
       line-height: 40px;
       font-size: 14px;
+      font-weight: bold;
       font-family: "Lato", sans-serif;
       letter-spacing: 0.2em;
       text-align: center;
