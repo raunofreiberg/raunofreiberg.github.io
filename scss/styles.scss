@@ -24,6 +24,7 @@ body {
         margin: 20px 30px;
         @include align-self(flex-start);
         animation: fadeInText 1.4s ease-in-out;
+        -webkit-animation: fadeInText 1.4s ease-in-out;
     }
     &-svg__container {
         width: 100%;
@@ -40,6 +41,7 @@ body {
                 position: absolute;
                 width: 100%;
                 height: 60vh;
+                -webkit-animation: fadeInText 200ms ease-in-out;
                 animation: fadeInText 200ms ease-in-out;
                 //background: rgba(0, 0, 255, 0.35);
                 @include breakpoint(xs) {
@@ -48,8 +50,9 @@ body {
                 .letter__path {
                     stroke-dasharray: 6231 6233;
                     stroke-dashoffset: 6232;
-                    fill: url(#img1);
-                    animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s, fadeImg 6.1s;
+                    fill: url(#img1);                                        
+                    -webkit-animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s, fadeImg 6.1s;
+                    animation: draw 1900ms ease-in-out 0ms forwards, fade 6.1s, fadeImg 6.1s;                    
                 }
             }
         }
@@ -68,6 +71,7 @@ body {
             margin: 0;
             @include position(absolute, 80px null null null);
             animation: fadeInText 1.4s ease-in-out;
+            -webkit-animation: fadeInText 1.4s ease-in-out;
             &:after {
                 content: 'Front-end developer';
                 font-family: $paragraphFont;
@@ -89,6 +93,7 @@ body {
             width: 350px;
             @include position(absolute, null null 30px null);
             animation: fadeInText 1.4s ease-in-out;
+            -webkit-animation: fadeInText 1.4s ease-in-out;
         }
         a {
             text-decoration: none;
@@ -98,6 +103,7 @@ body {
             @include Button();
             @include position(absolute, null null -30px null);
             animation: fadeInText 1.4s ease-in-out;
+            -webkit-animation: fadeInText 1.4s ease-in-out;
         }
     }
     &-social__links {
@@ -109,6 +115,7 @@ body {
         width: 200px;
         padding: 0;
         animation: fadeInText 1.4s ease-in-out;
+        -webkit-animation: fadeInText 1.4s ease-in-out;
         li {
             display: inline-block;
             margin-right: 20px;
@@ -160,6 +167,7 @@ body {
         @include size(50px);
         @include position(absolute, 30px 15px null null);
         animation: fadeInText 1.4s ease-in-out;
+        -webkit-animation: fadeInText 1.4s ease-in-out;
         display: none;
         span {
             background: #222;

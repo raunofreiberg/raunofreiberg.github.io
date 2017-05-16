@@ -13,16 +13,28 @@
     }
 }
 
+@-webkit-keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 @keyframes fade {
     0% {
-        stroke-opacity: 0.90;
         fill: none;
-        opacity: .95;
         stroke: #222;
+        stroke-width: 1.25;
+        opacity: .95;
+    }
+    50% {
+        stroke: #222;
+        stroke-width: 1.25;         
+    }
+    70% {
+        stroke-width: 0;
     }
     93.93939393939394% {
-        stroke-opacity: 0.35;
-        opacity: .95;
+        opacity: .95;                        
     }
     100% {
         stroke-opacity: 0;
@@ -32,8 +44,14 @@
 }
 
 @keyframes fadeImg {
+    0% {
+        fill-opacity: 0;
+    }
+    20% {
+        fill-opacity: 0;
+    }
     30% {
-        fill-opacity: 0.1;
+        fill-opacity: 0;
     }
     50% {
         fill-opacity: 1;
@@ -42,3 +60,4 @@
         fill-opacity: 1;
     }
 }
+
