@@ -10,7 +10,7 @@ body {
 }
 
 .main__container {
-    overflow-x: hidden;        
+    overflow-x: hidden;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -90,14 +90,14 @@ body {
             @include position(absolute, null null 30px null);
             animation: fadeInText 1.4s ease-in-out;
         }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
         .main__copy-btn {
             @include Button();
             @include position(absolute, null null -30px null);
             animation: fadeInText 1.4s ease-in-out;
-            a {
-                text-decoration: none;
-                color: inherit;
-            }            
         }
     }
     &-social__links {
@@ -150,13 +150,11 @@ body {
         height: 30px;
     }
     &-portfolio__contact {
-       @include linkStyles();
+        @include linkStyles();
         @include position(fixed, 50% -145px null null);
         transform: rotate(90deg);
         width: 360px;
         height: 30px;
-
-
     }
     &-mobile__nav {
         @include size(50px);

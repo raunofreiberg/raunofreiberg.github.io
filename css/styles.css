@@ -278,6 +278,9 @@ body {
       position: absolute;
       bottom: 30px;
       animation: fadeInText 1.4s ease-in-out; }
+    .main__container-copy a {
+      text-decoration: none;
+      color: inherit; }
     .main__container-copy .main__copy-btn {
       border: 3px solid #222;
       width: 170px;
@@ -298,9 +301,6 @@ body {
         background: #222;
         color: #fff;
         cursor: pointer; }
-      .main__container-copy .main__copy-btn a {
-        text-decoration: none;
-        color: inherit; }
   .main__container-social__links {
     display: block;
     position: absolute;
