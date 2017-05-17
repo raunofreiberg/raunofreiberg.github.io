@@ -31,7 +31,7 @@
 .nav__mobile {
     @include size(50px);
     @include position(absolute,
-    8px 2px null null);
+    13px 2px null null);
     animation: fadeInText 1.4s ease-in-out;
     -webkit-animation: fadeInText 1.4s ease-in-out;
     display: none;
