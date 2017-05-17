@@ -149,6 +149,7 @@ body {
     right: 0;
     position: absolute;
     margin: 75px auto;
+    z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
     -webkit-animation: fadeInText 1.4s ease-in-out;
     p {
