@@ -30,7 +30,7 @@
     font-size: 1em;
     font-family: $paragraphFont;
     color: $paragraphBlack;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 @mixin linkStyles() {
@@ -40,7 +40,7 @@
     text-align: center;
     color: #222;
     font-family: $paragraphFont;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;

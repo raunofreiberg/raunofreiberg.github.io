@@ -112,7 +112,7 @@
       font-size: 1em;
       font-family: "Lato", sans-serif;
       color: #333;
-      font-weight: normal;
+      font-weight: 400;
       max-width: 430px;
       margin: 70px auto;
       text-align: center;
@@ -223,7 +223,7 @@ a {
     text-align: center;
     color: #222;
     font-family: "Lato", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
@@ -356,7 +356,7 @@ body {
       font-size: 1em;
       font-family: "Lato", sans-serif;
       color: #333;
-      font-weight: normal;
+      font-weight: 400;
       max-width: 400px;
       width: 350px;
       position: absolute;
@@ -424,7 +424,7 @@ body {
     text-align: center;
     color: #222;
     font-family: "Lato", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
@@ -458,7 +458,7 @@ body {
     text-align: center;
     color: #222;
     font-family: "Lato", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 20px;
     z-index: 2;
     animation: fadeInText 1.4s ease-in-out;
