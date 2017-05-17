@@ -216,6 +216,10 @@ body {
             padding: 9px;
             border-radius: 50%;
             margin-top: 30px;
+            a {
+                z-index: 1;
+                position: relative;
+            }
         }
     }
 }

@@ -453,6 +453,9 @@ body {
       padding: 9px;
       border-radius: 50%;
       margin-top: 30px; }
+      .contact__container ul li a {
+        z-index: 1;
+        position: relative; }
 
 @media (max-width: 768px) {
   .main__container-svg__container, .contact__container {
