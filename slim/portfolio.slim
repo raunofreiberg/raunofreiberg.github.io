@@ -8,46 +8,64 @@ html lang="en"
     link href="https://fonts.googleapis.com/css?family=Lato:300,700|Playfair+Display:400" rel="stylesheet" /
     title Portfolio
   body
+    a href="/" class="main__container-portfolio" HOME
     .card
       .img.gradientTool
       .card__content
-        h1 React Gradient Tool
+        h1
+          | React Gradient Tool
         span.card__content-separator
         p
-          | I was in need of a basic gradient tool that would help create custom gradients, simultaneously giving you the CSS code as well.
-          |  Couldn't find one to suit my needs, so I made my own.
+          | I was in need of a basic gradient tool that would help create custom gradients, simultaneously giving you the CSS code as
+          | well. Couldn't find one to suit my needs, so I made my own.
         p
           span style=("font-weight: bold; color: #111")  Tools used:
-          |  HTML5, SASS, React        
-        a href="https://github.com/raunofreiberg/react-gradient-tool" target="_blank"
-          .card__content-btn SEE REPO
+          |  HTML5, SASS, React
+        a href="https://github.com/raunofreiberg/react-gradient-tool" target="_blank" 
+        .card__content-btn
+          | SEE REPO
     .card
       .img.moviesApp
       .card__content
-        h1 Movies List
+        h1
+          | Movies List
         span.card__content-separator
         p
-          | A friend of mine is an avid, old-school, DVD-loving type of guy who has lots of movies. To make his life more bearable, I figured
-          |  a simple movie sorting list with a Google Sheets back-end would help.
+          | A friend of mine is an avid, old-school, DVD-loving type of guy who has lots of movies. To make his life more bearable, I
+          | figured a simple movie sorting list with a Google Sheets back-end would help.
         p
           span style=("font-weight: bold; color: #111")  Tools used:
-          |  HTML5, SASS, JavaScript, React, React Router, gSheets API
-        a href="https://github.com/raunofreiberg/movies-gSheets-API" target="_blank"
-          .card__content-btn SEE REPO
+          |  HTML5, SASS, JavaScript, React, React Router, gSheets
+          | API
+        a href="https://github.com/raunofreiberg/movies-gSheets-API" target="_blank" 
+        .card__content-btn
+          | SEE REPO
     .card
       .img.alexPortfolio
       .card__content
-        h1 Portfolio Template
+        h1
+          | Portfolio Template
         span.card__content-separator
         p
           | A basic light-weight developer portfolio that I created while learning SASS.
         p
           span style=("font-weight: bold; color: #111")  Tools used:
           |  HTML5, SASS, Bourbon
-        a href="http://raunofreiberg.com/alex-portfolio" target="_blank"
-          .card__content-btn SEE LIVE
+        a href="http://raunofreiberg.com/alex-portfolio" target="_blank" 
+        .card__content-btn
+          | SEE LIVE
     .main__container-mobile__nav
-      span
-      span
-      span
-        
+      span.strokes
+      span.strokes
+      span.strokes
+    .mobile__nav-fullscreen
+      ul
+        li
+          a href="#"  PORTFOLIO
+        li
+          a href="#"  CONTACT
+    .portfolio__footer
+        h1 Plenty more where that came from..
+        a href="https://github.com/raunofreiberg/" target="_blank" 
+            .portfolio__footer-btn SEE GITHUB
+    script src="js/main.js"

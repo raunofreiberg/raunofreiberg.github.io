@@ -16,6 +16,14 @@
     }
 }
 
+@mixin headlineStyles() {
+    max-width: 260px;
+    font-size: 5em;
+    letter-spacing: 0.05em;
+    font-family: $headlineFont;
+    font-weight: 600;
+}
+
 @mixin paragraphStyles() {
     letter-spacing: 0.1em;
     line-height: 1.5em;
@@ -27,7 +35,7 @@
 
 @mixin linkStyles() {
     @include transition(all 0.2s ease-in-out);
-    letter-spacing: 1em;    
+    letter-spacing: 1em;
     text-decoration: none;
     text-align: center;
     color: #222;

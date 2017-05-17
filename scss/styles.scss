@@ -63,11 +63,7 @@ body {
         height: 400px;
         left: 10%;
         h1 {
-            max-width: 260px;
-            font-size: 5em;
-            letter-spacing: 0.05em;
-            font-family: $headlineFont;
-            font-weight: 600;
+            @include headlineStyles();
             margin: 0;
             @include position(absolute, 80px null null null);
             animation: fadeInText 1.4s ease-in-out;
@@ -77,7 +73,7 @@ body {
                 font-family: $paragraphFont;
                 font-size: 16px;
                 width: 230px;
-                color: $grey;                
+                color: $grey;
                 position: absolute;
                 left: -3px;
                 bottom: -10px;
@@ -154,16 +150,30 @@ body {
         animation: fadeInText 1.4s ease-in-out;
         -webkit-animation: fadeInText 1.4s ease-in-out;
         display: none;
-        span {
+        z-index: 3;
+        .strokes {
             background: #222;
             width: 24px;
             height: 2px;
             display: block;
             margin-top: 7px;
+            transition: transform 0.3s, opacity 0.1s;
             &:nth-of-type(2) {
                 width: 18px;
                 margin-left: 5px;
             }
+        }
+        .hide {
+            opacity: 0;
+            transform: translateX(-42px);
+        }
+        .animate0 {
+            transform: rotate(45deg) translateY(3px);
+            background: #fff !important;
+        }
+        .animate2 {
+            transform: rotate(-45deg) translateY(-13px) translateX(10px);
+            background: #fff !important;
         }
     }
 }
@@ -192,6 +202,7 @@ body {
         display: block;
         margin: 150px auto;
         animation: grow 1.4s ease-in-out;
+        transition: transform 0.3s, opacity 0.1s;
     }
     @keyframes grow {
         0% {
@@ -225,14 +236,15 @@ body {
 }
 
 @include breakpoint(xxs) {
-    .main__container-svg__container, .contact__container {
+    .main__container-svg__container,
+    .contact__container {
         display: none;
     }
     .main__container-social__links {
         display: block;
         left: 0;
         height: 0;
-        bottom: 50px;        
+        bottom: 50px;
     }
     .main__container-copy {
         p {
@@ -249,4 +261,64 @@ body {
     .main__container-mobile__nav {
         display: block;
     }
+}
+
+
+.mobileWhite {
+    svg {
+        path {
+            fill: red;
+        }
+    }
+}
+
+
+.mobile__nav-fullscreen {
+    background-color: rgba(52, 152, 219, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -moz-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -ms-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -o-transition: background 0.5s ease-in-out, opacity 0.5s;
+    transition: background 0.5s ease-in-out, opacity 0.5s;
+    text-align: center;
+}
+
+.mobile__nav-fullscreen.show {
+    opacity: 1;
+    background-color: #222;
+    z-index: 1;
+    -webkit-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -moz-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -ms-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -o-transition: background 0.5s ease-in-out, visibility 0.5s;
+    transition: background 0.5s ease-in-out, visibility 0.5s;
+}
+
+
+.mobile__nav-fullscreen ul {    
+    list-style: none;    
+    width: 100%;   
+    margin-top: 100px;         
+    padding: 0;    
+    li {
+        margin-top: 30px;
+    }
+}
+
+.mobile__nav-fullscreen li a {
+    visibility: inherit;
+    color: white;
+    font-family: $paragraphFont;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 150%;  
+    letter-spacing: 0.15em;  
 }
