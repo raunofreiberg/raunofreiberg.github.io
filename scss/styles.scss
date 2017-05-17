@@ -263,7 +263,6 @@ body {
     }
 }
 
-
 .mobileWhite {
     svg {
         path {
@@ -272,7 +271,6 @@ body {
     }
 }
 
-
 .mobile__nav-fullscreen {
     background-color: rgba(52, 152, 219, 0);
     top: 0;
@@ -280,32 +278,35 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: 0;
-    -webkit-transition: background 0.5s ease-in-out, opacity 0.5s;
-    -moz-transition: background 0.5s ease-in-out, opacity 0.5s;
-    -ms-transition: background 0.5s ease-in-out, opacity 0.5s;
-    -o-transition: background 0.5s ease-in-out, opacity 0.5s;
-    transition: background 0.5s ease-in-out, opacity 0.5s;
+    display: none;
+    animation: slideIn 0.2s ease-in-out;
     text-align: center;
+    @include transition(all 0.2s ease-in-out);
 }
 
 .mobile__nav-fullscreen.show {
-    opacity: 1;
+    display: block;
     background-color: #222;
     z-index: 1;
-    -webkit-transition: background 0.5s ease-in-out, visibility 0.5s;
-    -moz-transition: background 0.5s ease-in-out, visibility 0.5s;
-    -ms-transition: background 0.5s ease-in-out, visibility 0.5s;
-    -o-transition: background 0.5s ease-in-out, visibility 0.5s;
-    transition: background 0.5s ease-in-out, visibility 0.5s;
+    position: fixed;
+    animation: slideIn 0.2s ease-in-out;
+    @include transition(all 0.2s ease-in-out);
 }
 
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
-.mobile__nav-fullscreen ul {    
-    list-style: none;    
-    width: 100%;   
-    margin-top: 100px;         
-    padding: 0;    
+.mobile__nav-fullscreen ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 100px;
+    padding: 0;
     li {
         margin-top: 30px;
     }
@@ -317,8 +318,8 @@ body {
     font-family: $paragraphFont;
     font-size: 1.5em;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
-    line-height: 150%;  
-    letter-spacing: 0.15em;  
+    line-height: 150%;
+    letter-spacing: 0.05em;
 }

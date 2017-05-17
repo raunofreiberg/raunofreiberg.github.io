@@ -68,10 +68,6 @@
     background-size: cover;
     background-position: center center;
     height: 580px; }
-    @media (max-width: 1150px) {
-      .card .img {
-        flex-basis: 100%;
-        height: 250px; } }
     .card .img.gradientTool {
       background-image: url("../img/gradient.jpg"); }
     .card .img.moviesApp {
@@ -88,9 +84,6 @@
     flex: 1;
     background: white;
     padding: 20px 40px; }
-    @media (max-width: 1150px) {
-      .card__content {
-        padding: 20px; } }
     .card__content h1 {
       font-family: "Playfair Display", serif;
       max-width: 600px;
@@ -201,6 +194,17 @@
       background: #222;
       color: #fff;
       cursor: pointer; }
+
+@media (max-width: 1150px) {
+  .card .img {
+    flex-basis: 100%;
+    height: 250px; }
+  .card__content {
+    padding: 20px; }
+    .card__content h1 {
+      font-size: 2em; }
+    .card__content p {
+      font-size: 0.9em; } }
 
 body {
   margin: 0;
@@ -530,23 +534,28 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  opacity: 0;
-  -webkit-transition: background 0.5s ease-in-out, opacity 0.5s;
-  -moz-transition: background 0.5s ease-in-out, opacity 0.5s;
-  -ms-transition: background 0.5s ease-in-out, opacity 0.5s;
-  -o-transition: background 0.5s ease-in-out, opacity 0.5s;
-  transition: background 0.5s ease-in-out, opacity 0.5s;
-  text-align: center; }
+  display: none;
+  animation: slideIn 0.2s ease-in-out;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
 
 .mobile__nav-fullscreen.show {
-  opacity: 1;
+  display: block;
   background-color: #222;
   z-index: 1;
-  -webkit-transition: background 0.5s ease-in-out, visibility 0.5s;
-  -moz-transition: background 0.5s ease-in-out, visibility 0.5s;
-  -ms-transition: background 0.5s ease-in-out, visibility 0.5s;
-  -o-transition: background 0.5s ease-in-out, visibility 0.5s;
-  transition: background 0.5s ease-in-out, visibility 0.5s; }
+  position: fixed;
+  animation: slideIn 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+@keyframes slideIn {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 .mobile__nav-fullscreen ul {
   list-style: none;
@@ -562,7 +571,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 1.5em;
   text-decoration: none;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   line-height: 150%;
-  letter-spacing: 0.15em; }
+  letter-spacing: 0.05em; }

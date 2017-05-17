@@ -12,10 +12,6 @@
         background-size: cover;
         background-position: center center;
         height: 580px;
-        @include breakpoint(1150) {
-            flex-basis: 100%;
-            height: 250px;
-        }
         &.gradientTool {
             background-image: url('../img/gradient.jpg');
         }
@@ -36,9 +32,6 @@
         flex: 1;
         background: white;
         padding: 20px 40px;
-        @include breakpoint(1150) {
-            padding: 20px;
-        }
         h1 {
             font-family: $headlineFont;
             max-width: 600px;
@@ -54,7 +47,7 @@
                 font-weight: 300;
                 width: 150px;
                 height: 25px;
-                font-family: $paragraphFont;                
+                font-family: $paragraphFont;
                 letter-spacing: 0.3em;
                 font-size: 14px;
                 margin: auto;
@@ -125,5 +118,21 @@
     &-btn {
         @include Button();
         margin: 40px auto;
+    }
+}
+
+@include breakpoint(1150) {
+    .card .img {
+        flex-basis: 100%;
+        height: 250px;
+    }
+    .card__content {
+        padding: 20px;
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 0.9em;
+        }
     }
 }
