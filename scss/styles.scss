@@ -121,14 +121,26 @@ body {
             }
         }
     }
-    &-portfolio {
-        @include position(absolute, 20px 0 null 0);
-        @include linkStyles();
-        margin: auto;
-        width: 450px;
-        height: 40px;
+    &-email {
+        width: 100%;        
+        height: 50px;
+        align-self: flex-end;
+        position: fixed;
         background: white;
-        line-height: 40px;
+        bottom: 30px;
+        &__link {
+            @include linkStyles();
+            letter-spacing: 0.5em;
+            width: 700px;
+            height: 25px; 
+            line-height: 50px;           
+            display: block;
+            margin: 0 auto;    
+            &:hover {
+                letter-spacing: 0.70em;
+            }                    
+
+        }
     }
 }
 
