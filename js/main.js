@@ -3,8 +3,8 @@
 
 
     let strokes = document.querySelectorAll(".strokes"),
-        icon = document.querySelector(".main__container-mobile__nav"),
-        fullScreenMenu = document.querySelector(".mobile__nav-fullscreen");        
+        icon = document.querySelector(".nav"),
+        fullScreenMenu = document.querySelector(".nav__mobile-fullscreen");        
 
     function transformStart() {
 

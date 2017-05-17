@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var slim = require("gulp-slim");
 
 gulp.task('sass', () => {
   gulp.src('scss/**/*.scss')
@@ -13,20 +12,11 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('slim', () => {
-  gulp.src("./slim/*.slim")
-    .pipe(slim({
-      pretty: true
-    }))
-    .pipe(gulp.dest("./"));
-});
 
-
-gulp.task('watch', () => {
-  gulp.watch('slim/**/*.slim', ['slim']);
+gulp.task('watch', () => {  
   gulp.watch('scss/**/*.scss', ['sass']);
 })
 
 
 // define the default gulp task
-gulp.task('default', ['sass', 'watch', 'slim']);
+gulp.task('default', ['sass', 'watch']);

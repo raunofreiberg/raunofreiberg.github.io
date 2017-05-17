@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #111;
+        font-size: 20px;
+        font-family: Lato-Regular, Lato;
+        letter-spacing: 0.1em;
+      }
+
+      .cls-2 {
+        font-family: Lato-Light, Lato;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text id="RAUNO_FREIBERG" data-name="RAUNO FREIBERG" class="cls-1" transform="translate(0 20)"><tspan x="0" y="0">RAUNO </tspan><tspan class="cls-2" y="0">FREIBERG</tspan></text>
+</svg>

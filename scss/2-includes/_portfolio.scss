@@ -14,13 +14,13 @@
         height: 580px;
         &.gradientTool {
             background-image: url('../img/gradient.jpg');
-        }
-        &.moviesApp {
-            background-image: url('../img/movies.jpg');
             order: 1;
             @include breakpoint(xs) {
                 order: 0;
             }
+        }
+        &.moviesApp {
+            background-image: url('../img/movies.jpg');
         }
         &.alexPortfolio {
             background-image: url('../img/alex.jpg');
@@ -86,10 +86,6 @@
                 background: $grey;
             }
         }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
         &-btn {
             @include Button;
             margin: 50px auto 0;
@@ -111,10 +107,6 @@
         margin: 0 auto;
         font-size: 2em;
     }
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
     &-btn {
         @include Button();
         margin: 40px auto;
@@ -135,4 +127,13 @@
             font-size: 0.9em;
         }
     }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio__logo {
+    top: 0;
 }

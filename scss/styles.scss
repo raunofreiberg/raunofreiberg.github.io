@@ -4,6 +4,7 @@
 @import '1-base/_mixins';
 @import '1-base/_animations';
 @import '2-includes/_portfolio.scss';
+@import '2-includes/_nav.scss';
 body {
     margin: 0;
     padding: 0;
@@ -16,16 +17,6 @@ body {
     position: relative;
     @include display(flex);
     @include align-items(center);
-    &-logo {
-        line-height: 50px;
-        height: 50px;
-        width: 150px;
-        position: absolute;
-        margin: 20px 30px;
-        @include align-self(flex-start);
-        animation: fadeInText 1.4s ease-in-out;
-        -webkit-animation: fadeInText 1.4s ease-in-out;
-    }
     &-svg__container {
         width: 100%;
         position: absolute;
@@ -139,38 +130,6 @@ body {
         background: white;
         line-height: 40px;
     }
-    &-mobile__nav {
-        @include size(50px);
-        @include position(absolute, 30px 15px null null);
-        animation: fadeInText 1.4s ease-in-out;
-        -webkit-animation: fadeInText 1.4s ease-in-out;
-        display: none;
-        z-index: 3;
-        .strokes {
-            background: #222;
-            width: 24px;
-            height: 2px;
-            display: block;
-            margin-top: 7px;
-            transition: transform 0.3s, opacity 0.1s;
-            &:nth-of-type(2) {
-                width: 18px;
-                margin-left: 5px;
-            }
-        }
-        .hide {
-            opacity: 0;
-            transform: translateX(-42px);
-        }
-        .animate0 {
-            transform: rotate(45deg) translateY(3px);
-            background: #fff !important;
-        }
-        .animate2 {
-            transform: rotate(-45deg) translateY(-13px) translateX(10px);
-            background: #fff !important;
-        }
-    }
 }
 
 .contact__container {
@@ -222,6 +181,9 @@ body {
             padding: 9px;
             border-radius: 50%;
             margin-top: 30px;
+            &:hover {
+                cursor: pointer;
+            }
             a {
                 z-index: 1;
                 position: relative;
@@ -253,20 +215,45 @@ body {
             bottom: 40px;
         }
     }
-    .main__container-mobile__nav {
+    .nav .nav__mobile {
         display: block;
     }
 }
 
-.mobileWhite {
-    svg {
-        path {
-            fill: red;
+.nav__mobile {
+    @include size(50px);
+    @include position(absolute, 8px 2px null null);
+    animation: fadeInText 1.4s ease-in-out;
+    -webkit-animation: fadeInText 1.4s ease-in-out;
+    display: none;
+    z-index: 3;
+    .strokes {
+        background: #222;
+        width: 24px;
+        height: 2px;
+        display: block;
+        margin-top: 7px;
+        transition: transform 0.3s, opacity 0.1s;
+        &:nth-of-type(2) {
+            width: 18px;
+            margin-left: 5px;
         }
+    }
+    .hide {
+        opacity: 0;
+        transform: translateX(-42px);
+    }
+    .animate0 {
+        transform: rotate(45deg) translateY(3px);
+        background: #fff !important;
+    }
+    .animate2 {
+        transform: rotate(-45deg) translateY(-13px) translateX(10px);
+        background: #fff !important;
     }
 }
 
-.mobile__nav-fullscreen {
+.nav__mobile-fullscreen {
     background-color: rgba(52, 152, 219, 0);
     top: 0;
     left: 0;
@@ -279,7 +266,7 @@ body {
     @include transition(all 0.2s ease-in-out);
 }
 
-.mobile__nav-fullscreen.show {
+.nav__mobile-fullscreen.show {
     display: block;
     background-color: #222;
     z-index: 1;
@@ -297,24 +284,23 @@ body {
     }
 }
 
-.mobile__nav-fullscreen ul {
+.nav__mobile-fullscreen ul {
     list-style: none;
     width: 100%;
     margin-top: 100px;
     padding: 0;
     li {
         margin-top: 30px;
+        a {
+            visibility: inherit;
+            color: white;
+            font-family: $paragraphFont;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: 300;
+            text-transform: uppercase;
+            line-height: 150%;
+            letter-spacing: 0.05em;
+        }
     }
-}
-
-.mobile__nav-fullscreen li a {
-    visibility: inherit;
-    color: white;
-    font-family: $paragraphFont;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 150%;
-    letter-spacing: 0.05em;
 }
