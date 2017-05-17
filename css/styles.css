@@ -211,10 +211,11 @@ a {
 .nav {
   background: white;
   width: 100%;
-  height: 50px;
+  height: 40px;
   position: fixed;
   z-index: 1;
-  top: 0px; }
+  top: 0;
+  padding-top: 20px; }
   .nav__link {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -232,7 +233,7 @@ a {
     height: 50px;
     margin: 0 auto;
     display: block;
-    line-height: 50px; }
+    line-height: 20px; }
     @media (max-width: 768px) {
       .nav__link {
         display: none; } }
@@ -244,7 +245,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     width: 150px;
-    height: 50px;
+    height: 60px;
     position: absolute;
     top: 0;
     margin: 0 20px;
@@ -504,7 +505,7 @@ body {
     align-self: flex-end;
     position: fixed;
     background: white;
-    bottom: 30px; }
+    bottom: 15px; }
     .main__container-email__link {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;

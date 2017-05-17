@@ -127,7 +127,7 @@ body {
         align-self: flex-end;
         position: fixed;
         background: white;
-        bottom: 30px;
+        bottom: 15px;
         &__link {
             @include linkStyles();
             letter-spacing: 0.5em;
@@ -138,8 +138,7 @@ body {
             margin: 0 auto;    
             &:hover {
                 letter-spacing: 0.70em;
-            }                    
-
+            }                                
         }
     }
 }

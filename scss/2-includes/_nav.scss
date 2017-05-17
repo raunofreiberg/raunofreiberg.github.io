@@ -1,24 +1,25 @@
 .nav {
     background: white;
     width: 100%;
-    height: 50px;
+    height: 40px;
     position: fixed;
     z-index: 1;
-    top: 0px;
+    top: 0;
+    padding-top: 20px;
     &__link {
         @include linkStyles();
         width: 420px;
         height: 50px;
         margin: 0 auto;
         display: block;
-        line-height: 50px;
+        line-height: 20px;
     }
     &__logo {
         background: url('../img/logo.svg');
         background-repeat: no-repeat;
         background-position: center;
         width: 150px;
-        height: 50px;
+        height: 60px;                        
         position: absolute;
         top: 0;
         margin: 0 20px;
