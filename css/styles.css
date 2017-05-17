@@ -310,14 +310,14 @@ body {
         content: 'FRONT-END DEVELOPER';
         font-family: "Lato", sans-serif;
         font-size: 16px;
-        width: 230px;
+        width: 250px;
         color: #c3c3c3;
         position: absolute;
         left: -3px;
         bottom: -10px;
         padding-left: 5px;
         font-weight: 300;
-        letter-spacing: 0.1em; }
+        letter-spacing: 3px; }
     .main__container-copy p {
       letter-spacing: 0.1em;
       line-height: 1.5em;
@@ -328,7 +328,7 @@ body {
       max-width: 400px;
       width: 350px;
       position: absolute;
-      bottom: 30px;
+      bottom: 10px;
       animation: fadeInText 1.4s ease-in-out;
       -webkit-animation: fadeInText 1.4s ease-in-out; }
     .main__container-copy a {
@@ -348,7 +348,7 @@ body {
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
       position: absolute;
-      bottom: -30px;
+      bottom: -50px;
       animation: fadeInText 1.4s ease-in-out;
       -webkit-animation: fadeInText 1.4s ease-in-out; }
       .main__container-copy .main__copy-btn:hover {
@@ -406,11 +406,6 @@ body {
         display: none; } }
     .main__container-portfolio:hover {
       letter-spacing: 1.75em; }
-    @media (max-width: 1150px) {
-      .main__container-portfolio {
-        left: auto;
-        right: 90px;
-        width: 250px; } }
   .main__container-mobile__nav {
     height: 50px;
     width: 50px;

@@ -72,21 +72,21 @@ body {
                 content: 'FRONT-END DEVELOPER';
                 font-family: $paragraphFont;
                 font-size: 16px;
-                width: 230px;
+                width: 250px;
                 color: $grey;
                 position: absolute;
                 left: -3px;
                 bottom: -10px;
                 padding-left: 5px;
                 font-weight: 300;
-                letter-spacing: 0.1em;
+                letter-spacing: 3px;
             }
         }
         p {
             @include paragraphStyles();
             max-width: 400px;
             width: 350px;
-            @include position(absolute, null null 30px null);
+            @include position(absolute, null null 10px null);
             animation: fadeInText 1.4s ease-in-out;
             -webkit-animation: fadeInText 1.4s ease-in-out;
         }
@@ -96,7 +96,7 @@ body {
         }
         .main__copy-btn {
             @include Button();
-            @include position(absolute, null null -30px null);
+            @include position(absolute, null null -50px null);
             animation: fadeInText 1.4s ease-in-out;
             -webkit-animation: fadeInText 1.4s ease-in-out;
         }
@@ -138,11 +138,6 @@ body {
         height: 40px;
         background: white;
         line-height: 40px;
-        @include breakpoint(1250) {
-            left: auto;
-            right: 90px;
-            width: 250px;
-        }
     }
     &-mobile__nav {
         @include size(50px);
