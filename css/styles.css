@@ -169,6 +169,7 @@
     max-width: 480px;
     font-family: "Playfair Display", serif;
     margin: 0 auto;
+    font-weight: 400;
     font-size: 2em; }
   .portfolio__footer-btn {
     border: 3px solid #222;
@@ -249,6 +250,92 @@ a {
     margin: 0 20px;
     -webkit-animation: fadeInText 200ms ease-in-out;
     animation: fadeInText 200ms ease-in-out; }
+
+.nav__mobile {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  animation: fadeInText 1.4s ease-in-out;
+  -webkit-animation: fadeInText 1.4s ease-in-out;
+  display: none;
+  z-index: 3; }
+  .nav__mobile .strokes {
+    background: #222;
+    width: 24px;
+    height: 2px;
+    display: block;
+    margin-top: 7px;
+    transition: transform 0.3s, opacity 0.1s; }
+    .nav__mobile .strokes:nth-of-type(2) {
+      width: 18px;
+      margin-left: 5px; }
+  .nav__mobile .hide {
+    opacity: 0;
+    transform: translateX(-42px); }
+  .nav__mobile .animate0 {
+    transform: rotate(45deg) translateY(3px);
+    background: #fff !important; }
+  .nav__mobile .animate2 {
+    transform: rotate(-45deg) translateY(-13px) translateX(10px);
+    background: #fff !important; }
+
+.nav__mobile-fullscreen {
+  background-color: rgba(52, 152, 219, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  animation: slideIn 0.2s ease-in-out;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .nav__mobile-fullscreen .nav__mobile-social {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 25px; }
+    .nav__mobile-fullscreen .nav__mobile-social svg {
+      height: 30px;
+      width: 30px; }
+
+.nav__mobile-fullscreen.show {
+  display: block;
+  background-color: #222;
+  z-index: 1;
+  position: fixed;
+  animation: slideIn 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+@keyframes slideIn {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+.nav__mobile-fullscreen ul {
+  list-style: none;
+  width: 100%;
+  margin-top: 100px;
+  padding: 0; }
+  .nav__mobile-fullscreen ul li {
+    margin-top: 30px; }
+    .nav__mobile-fullscreen ul li a {
+      visibility: inherit;
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 1.5em;
+      text-decoration: none;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 150%;
+      letter-spacing: 0.05em; }
 
 body {
   margin: 0;
@@ -525,81 +612,3 @@ body {
     bottom: 40px; }
   .nav .nav__mobile {
     display: block; } }
-
-.nav__mobile {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: 8px;
-  right: 2px;
-  animation: fadeInText 1.4s ease-in-out;
-  -webkit-animation: fadeInText 1.4s ease-in-out;
-  display: none;
-  z-index: 3; }
-  .nav__mobile .strokes {
-    background: #222;
-    width: 24px;
-    height: 2px;
-    display: block;
-    margin-top: 7px;
-    transition: transform 0.3s, opacity 0.1s; }
-    .nav__mobile .strokes:nth-of-type(2) {
-      width: 18px;
-      margin-left: 5px; }
-  .nav__mobile .hide {
-    opacity: 0;
-    transform: translateX(-42px); }
-  .nav__mobile .animate0 {
-    transform: rotate(45deg) translateY(3px);
-    background: #fff !important; }
-  .nav__mobile .animate2 {
-    transform: rotate(-45deg) translateY(-13px) translateX(10px);
-    background: #fff !important; }
-
-.nav__mobile-fullscreen {
-  background-color: rgba(52, 152, 219, 0);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: none;
-  animation: slideIn 0.2s ease-in-out;
-  text-align: center;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-
-.nav__mobile-fullscreen.show {
-  display: block;
-  background-color: #222;
-  z-index: 1;
-  position: fixed;
-  animation: slideIn 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-
-@keyframes slideIn {
-  0% {
-    width: 0; }
-  100% {
-    width: 100%; } }
-
-.nav__mobile-fullscreen ul {
-  list-style: none;
-  width: 100%;
-  margin-top: 100px;
-  padding: 0; }
-  .nav__mobile-fullscreen ul li {
-    margin-top: 30px; }
-    .nav__mobile-fullscreen ul li a {
-      visibility: inherit;
-      color: white;
-      font-family: "Lato", sans-serif;
-      font-size: 1.5em;
-      text-decoration: none;
-      font-weight: 300;
-      text-transform: uppercase;
-      line-height: 150%;
-      letter-spacing: 0.05em; }
