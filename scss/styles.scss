@@ -125,7 +125,7 @@ body {
         width: 100%;
         height: 50px;
         align-self: flex-end;
-        position: fixed;        
+        position: fixed;
         bottom: 15px;
         &__link {
             @include linkStyles();
@@ -210,7 +210,8 @@ body {
 
 @include breakpoint(xxs) {
     .main__container-svg__container,
-    .contact__container, .main__container-email {
+    .contact__container,
+    .main__container-email {
         display: none;
     }
     .main__container-social__links {

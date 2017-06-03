@@ -96,7 +96,7 @@
         content: 'DEVELOPMENT';
         position: absolute;
         color: #cecece;
-        font-weight: 400;
+        font-weight: 300;
         width: 150px;
         height: 25px;
         font-family: "Lato", sans-serif;
@@ -241,11 +241,13 @@ a {
       letter-spacing: 1.75em;
       cursor: pointer; }
   .nav__logo {
-    background: url("../img/logo.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 150px;
+    width: auto;
     height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.1em;
     position: absolute;
     top: 0;
     margin: 0 20px;
@@ -608,7 +610,8 @@ body {
 
 @media (max-width: 768px) {
   .main__container-svg__container,
-  .contact__container, .main__container-email {
+  .contact__container,
+  .main__container-email {
     display: none; }
   .main__container-social__links {
     display: block;
