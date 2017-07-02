@@ -4,7 +4,7 @@
     @include display(flex);
     @include flex-wrap(wrap);
     height: auto;
-    box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 31px 0 rgba(0,0,0,.08);
     background: white;
     animation: fadeInText 1s ease-in-out;
     .img {
@@ -44,7 +44,7 @@
                 content: 'DEVELOPMENT';
                 position: absolute;
                 color: #cecece;
-                font-weight: 300;
+                font-weight: 400;
                 width: 150px;
                 height: 25px;
                 font-family: $paragraphFont;
@@ -63,7 +63,6 @@
             text-align: center;
             margin-bottom: 30px;
             color: $cardGrey;
-            font-weight: 300;
         }
         p:nth-of-type(2) {
             margin: 15px auto;

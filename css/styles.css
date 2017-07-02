@@ -60,7 +60,7 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: auto;
-  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.12), 0 3px 7px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.08);
   background: white;
   animation: fadeInText 1s ease-in-out; }
   .card .img {
@@ -96,7 +96,7 @@
         content: 'DEVELOPMENT';
         position: absolute;
         color: #cecece;
-        font-weight: 300;
+        font-weight: 400;
         width: 150px;
         height: 25px;
         font-family: "Lato", sans-serif;
@@ -117,8 +117,7 @@
       margin: 70px auto;
       text-align: center;
       margin-bottom: 30px;
-      color: #838383;
-      font-weight: 300; }
+      color: #838383; }
     .card__content p:nth-of-type(2) {
       margin: 15px auto; }
     .card__content-separator {
@@ -245,7 +244,7 @@ a {
     height: 60px;
     line-height: 60px;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 300;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.1em;
     position: absolute;
@@ -344,6 +343,9 @@ body {
   margin: 0;
   padding: 0; }
 
+* {
+  -webkit-font-smoothing: antialiased; }
+
 .main__container {
   overflow-x: hidden;
   width: 100%;
@@ -438,7 +440,7 @@ body {
         left: -3px;
         bottom: -10px;
         padding-left: 5px;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: 3px; }
     .main__container-copy p {
       letter-spacing: 0.1em;
