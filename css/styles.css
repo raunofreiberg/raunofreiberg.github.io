@@ -246,8 +246,8 @@ a {
     width: auto;
     height: 60px;
     line-height: 60px;
-    font-weight: 300;
     font-family: "Lato", sans-serif;
+    font-weight: 300;
     letter-spacing: 0.1em;
     position: absolute;
     top: 0;
@@ -436,7 +436,7 @@ body {
         content: 'FRONT-END DEVELOPER';
         font-family: "Lato", sans-serif;
         font-size: 16px;
-        width: 250px;
+        width: 300px;
         color: #c3c3c3;
         position: absolute;
         left: -3px;
