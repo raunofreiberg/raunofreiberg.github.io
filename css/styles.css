@@ -62,12 +62,14 @@
   height: auto;
   box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.08);
   background: white;
+  border-radius: 3px;
   animation: fadeInText 1s ease-in-out; }
   .card .img {
     flex-basis: 60%;
     background-size: cover;
     background-position: center center;
-    height: 580px; }
+    height: 580px;
+    border-radius: 3px 0 0 3px; }
     .card .img.gradientTool {
       background-image: url("../img/gradient.jpg");
       order: 1; }
@@ -243,7 +245,6 @@ a {
     width: auto;
     height: 60px;
     line-height: 60px;
-    font-size: 14px;
     font-weight: 300;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.1em;
