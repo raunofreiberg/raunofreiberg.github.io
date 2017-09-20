@@ -1,6 +1,6 @@
 .card {
-    margin: 80px auto;
-    width: 90vw;
+    margin: 80px auto;    
+    max-width: 1200px;
     @include display(flex);
     @include flex-wrap(wrap);
     height: auto;
@@ -33,7 +33,7 @@
         height: 100%;
         flex: 1;
         background: white;
-        padding: 20px 40px;
+        padding: 32px;
         h1 {
             font-family: $headlineFont;
             max-width: 600px;
