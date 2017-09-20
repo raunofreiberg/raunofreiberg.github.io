@@ -3,10 +3,11 @@
     max-width: 1200px;
     @include display(flex);
     @include flex-wrap(wrap);
+    @include align-items(center);
     height: auto;
-    box-shadow: 0 4px 31px 0 rgba(0,0,0,.08);
-    background: white;
-    border-radius: 3px;
+    box-shadow: 0 4px 51px 0 rgba(0,0,0,.08);
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
     animation: fadeInText 1s ease-in-out;
     .img {
         flex-basis: 60%;

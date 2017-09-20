@@ -154,8 +154,8 @@ body {
     margin: 75px auto;
     z-index: 2;
     opacity: 0;
-    animation: fadeInText 1.4s ease-in-out;
-    -webkit-animation: fadeInText 1.4s ease-in-out;
+    animation: fadeInText 800ms ease-in-out;
+    -webkit-animation: fadeInText 800ms ease-in-out;
     animation-delay: 1.7s;
     animation-fill-mode: forwards;
     p {
@@ -173,7 +173,7 @@ body {
         height: 225px;
         display: block;
         margin: 150px auto;
-        animation: grow 1.4s ease-in-out;
+        animation: grow 2s cubic-bezier(.2, .9, 0, 1);
         animation-delay: 1.7s;
         animation-fill-mode: forwards;
     }

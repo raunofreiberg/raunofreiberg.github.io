@@ -64,7 +64,6 @@
 }
 
 .nav__mobile-fullscreen {
-    background-color: rgba(52, 152, 219, 0);
     top: 0;
     left: 0;
     width: 100%;
@@ -86,7 +85,7 @@
 
 .nav__mobile-fullscreen.show {
     display: block;
-    background-color: #222;
+    background-color: #171616;
     z-index: 1;
     position: fixed;
     animation: slideIn 0.2s ease-in-out;

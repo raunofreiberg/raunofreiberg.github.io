@@ -59,10 +59,19 @@
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   height: auto;
-  box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 51px 0 rgba(0, 0, 0, 0.08);
   background: white;
-  border-radius: 3px;
+  border-radius: 4px;
   animation: fadeInText 1s ease-in-out; }
   .card .img {
     flex-basis: 60%;
@@ -286,7 +295,6 @@ a {
     background: #fff !important; }
 
 .nav__mobile-fullscreen {
-  background-color: rgba(52, 152, 219, 0);
   top: 0;
   left: 0;
   width: 100%;
@@ -309,7 +317,7 @@ a {
 
 .nav__mobile-fullscreen.show {
   display: block;
-  background-color: #222;
+  background-color: #171616;
   z-index: 1;
   position: fixed;
   animation: slideIn 0.2s ease-in-out;
@@ -547,8 +555,8 @@ body {
   margin: 75px auto;
   z-index: 2;
   opacity: 0;
-  animation: fadeInText 1.4s ease-in-out;
-  -webkit-animation: fadeInText 1.4s ease-in-out;
+  animation: fadeInText 800ms ease-in-out;
+  -webkit-animation: fadeInText 800ms ease-in-out;
   animation-delay: 1.7s;
   animation-fill-mode: forwards; }
   .contact__container p {
@@ -581,7 +589,7 @@ body {
     height: 225px;
     display: block;
     margin: 150px auto;
-    animation: grow 1.4s ease-in-out;
+    animation: grow 2s cubic-bezier(0.2, 0.9, 0, 1);
     animation-delay: 1.7s;
     animation-fill-mode: forwards; }
 
