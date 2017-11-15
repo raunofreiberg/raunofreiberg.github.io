@@ -43,7 +43,7 @@
     fill-opacity: 1; } }
 
 .card {
-  margin: 80px auto;
+  margin: 64px auto;
   max-width: 1200px;
   display: -webkit-box;
   display: -moz-box;
@@ -69,26 +69,29 @@
   align-items: center;
   -ms-flex-align: center;
   height: auto;
-  box-shadow: 0 4px 51px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.08), 0px 6px 18px 0px rgba(0, 0, 0, 0.05);
   background: white;
   border-radius: 4px;
   animation: fadeInText 1s ease-in-out; }
+  .card:first-of-type {
+    margin-top: 80px; }
   .card .img {
     flex-basis: 60%;
     background-size: cover;
     background-position: center center;
     height: 580px;
     border-radius: 3px 0 0 3px; }
-    .card .img.gradientTool {
-      background-image: url("../img/gradient.jpg");
+    .card .img.rein {
+      background-image: url("../img/rein.png");
+      background-position: top center;
       order: 1; }
       @media (max-width: 1300px) {
-        .card .img.gradientTool {
+        .card .img.rein {
           order: 0; } }
-    .card .img.moviesApp {
-      background-image: url("../img/movies.jpg"); }
-    .card .img.alexPortfolio {
-      background-image: url("../img/alex.jpg");
+    .card .img.blackford {
+      background-image: url("../img/blackford.png"); }
+    .card .img.bloomfield {
+      background-image: url("../img/bloomfield.png");
       background-position: top center; }
   .card__content {
     height: 100%;
@@ -98,25 +101,11 @@
     .card__content h1 {
       font-family: "Playfair Display", serif;
       max-width: 600px;
-      margin: 50px auto;
+      margin: 32px auto;
       font-weight: 200;
       font-size: 3em;
       text-align: center;
       position: relative; }
-      .card__content h1:before {
-        content: 'DEVELOPMENT';
-        position: absolute;
-        color: #cecece;
-        font-weight: 400;
-        width: 150px;
-        height: 25px;
-        font-family: "Lato", sans-serif;
-        letter-spacing: 0.3em;
-        font-size: 14px;
-        margin: auto;
-        left: 0;
-        right: 0;
-        top: -25px; }
     .card__content p {
       letter-spacing: 0.1em;
       line-height: 1.5em;
@@ -125,9 +114,8 @@
       color: #333;
       font-weight: 400;
       max-width: 430px;
-      margin: 70px auto;
+      margin: 16px auto;
       text-align: center;
-      margin-bottom: 30px;
       color: #838383; }
     .card__content p:nth-of-type(2) {
       margin: 15px auto; }
@@ -136,7 +124,9 @@
       height: 18px;
       border: 2px solid #c3c3c3;
       border-radius: 50%;
-      margin: -35px auto;
+      margin-top: -24px;
+      margin-left: auto;
+      margin-right: auto;
       display: block;
       position: relative; }
       .card__content-separator:after {
@@ -201,12 +191,18 @@
       cursor: pointer; }
 
 @media (max-width: 1150px) {
+  .card {
+    margin: 64px 16px; }
   .card .img {
     flex-basis: 100%;
     height: 250px;
     border-radius: 3px 3px 0 0; }
+  .img.blackford {
+    background-position: top center; }
   .card__content {
     padding: 20px; }
+    .card__content-btn {
+      margin: 32px auto 22px; }
     .card__content h1 {
       font-size: 2em; }
     .card__content p {
@@ -218,6 +214,17 @@ a {
 
 .portfolio__logo {
   top: 0; }
+
+@media (max-width: 400px) {
+  .card {
+    max-height: 470px;
+    margin: 32px 16px; }
+    .card:first-of-type {
+      margin-top: 80px; }
+    .card .img {
+      max-height: 150px; }
+    .card p:first-of-type {
+      display: none; } }
 
 .nav {
   background: white;
