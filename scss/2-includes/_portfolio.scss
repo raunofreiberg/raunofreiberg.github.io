@@ -9,6 +9,11 @@
     background: rgb(255, 255, 255);
     border-radius: 4px;
     animation: fadeInText 1s ease-in-out;
+    transition: box-shadow .4s;
+
+    &:hover {
+        box-shadow: 4px 6.9px 40px rgba(36, 37, 38, .2);
+    }
 
     &:first-of-type {
         margin-top: 80px;
@@ -21,18 +26,19 @@
         height: 580px;
         border-radius: 3px 0 0 3px;
         &.rein {
-            background-image: url('./img/rein.png');
+            background-image: url('../img/rein.png');
             background-position: top center;
             order: 1;
             @include breakpoint(xs) {
+                border-radius: 0 3px 3px 0;
                 order: 0;
             }
         }
         &.blackford {
-            background-image: url('./img/blackford.png');
+            background-image: url('../img/blackford.png');
         }
         &.bloomfield {
-            background-image: url('./img/bloomfield.png');
+            background-image: url('../img/bloomfield.png');
             background-position: top center;
         }
     }

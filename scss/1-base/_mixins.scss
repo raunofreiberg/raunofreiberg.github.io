@@ -6,7 +6,7 @@
     font-size: 14px;
     font-weight: bold;
     font-family: $paragraphFont;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     text-align: center;
     @include transition(all 0.2s ease-in-out);
     &:hover {
