@@ -21,7 +21,7 @@
         height: 580px;
         border-radius: 3px 0 0 3px;
         &.rein {
-            background-image: url('../img/rein.png');
+            background-image: url('./img/rein.png');
             background-position: top center;
             order: 1;
             @include breakpoint(xs) {
@@ -29,10 +29,10 @@
             }
         }
         &.blackford {
-            background-image: url('../img/blackford.png');
+            background-image: url('./img/blackford.png');
         }
         &.bloomfield {
-            background-image: url('../img/bloomfield.png');
+            background-image: url('./img/bloomfield.png');
             background-position: top center;
         }
     }

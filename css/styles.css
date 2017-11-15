@@ -82,16 +82,16 @@
     height: 580px;
     border-radius: 3px 0 0 3px; }
     .card .img.rein {
-      background-image: url("../img/rein.png");
+      background-image: url("./img/rein.png");
       background-position: top center;
       order: 1; }
       @media (max-width: 1300px) {
         .card .img.rein {
           order: 0; } }
     .card .img.blackford {
-      background-image: url("../img/blackford.png"); }
+      background-image: url("./img/blackford.png"); }
     .card .img.bloomfield {
-      background-image: url("../img/bloomfield.png");
+      background-image: url("./img/bloomfield.png");
       background-position: top center; }
   .card__content {
     height: 100%;
