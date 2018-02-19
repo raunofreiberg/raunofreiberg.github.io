@@ -99,7 +99,7 @@
       background-position: top center; }
     .card .img.css__grid {
       background-image: url("../img/cssgrid.png");
-      background-position: center center; }
+      background-position: top center; }
   .card__content {
     height: 100%;
     flex: 1;
@@ -532,7 +532,8 @@ body {
     height: 50px;
     align-self: flex-end;
     position: fixed;
-    bottom: 15px; }
+    bottom: 15px;
+    text-transform: uppercase; }
     .main__container-email__link {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;

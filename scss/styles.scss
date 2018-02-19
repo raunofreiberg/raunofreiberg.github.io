@@ -132,6 +132,7 @@ body {
         align-self: flex-end;
         position: fixed;
         bottom: 15px;
+        text-transform: uppercase;
         &__link {
             @include linkStyles();
             letter-spacing: 0.5em;
