@@ -196,6 +196,8 @@
       background: #222;
       color: #fff;
       cursor: pointer; }
+  .portfolio__footer .main__container-email__link {
+    text-transform: uppercase; }
 
 @media (max-width: 1150px) {
   .card {

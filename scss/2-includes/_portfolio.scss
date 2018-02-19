@@ -116,6 +116,9 @@
         @include Button();
         margin: 40px auto;
     }
+    .main__container-email__link {
+        text-transform: uppercase;
+    }
 }
 
 @include breakpoint(1150) {
