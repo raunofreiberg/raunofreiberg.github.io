@@ -97,6 +97,9 @@
     .card .img.bloomfield {
       background-image: url("../img/bloomfield.png");
       background-position: top center; }
+    .card .img.css__grid {
+      background-image: url("../img/cssgrid.png");
+      background-position: center center; }
   .card__content {
     height: 100%;
     flex: 1;
