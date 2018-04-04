@@ -74,6 +74,28 @@
   border-radius: 4px;
   animation: fadeInText 1s ease-in-out;
   transition: box-shadow .4s; }
+  .card.ribbon {
+    position: relative; }
+    .card.ribbon:after {
+      width: 214px;
+      height: 0;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 34px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #fff;
+      -webkit-transform: rotate(-45deg) translate(-64.5px, -4.5px);
+      transform: rotate(45deg) translate(-64.5px, -4.5px);
+      border-bottom: 32px solid #040404;
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
+      position: absolute;
+      right: -100px;
+      top: 115px;
+      content: 'Work in progress';
+      font-size: 14px;
+      font-family: "Lato"; }
   .card:hover {
     box-shadow: 4px 6.9px 40px rgba(36, 37, 38, 0.2); }
   .card:first-of-type {
@@ -92,6 +114,8 @@
         .card .img.rein {
           border-radius: 0 3px 3px 0;
           order: 0; } }
+    .card .img.kyrene {
+      background-image: url("../img/kyrene.png"); }
     .card .img.blackford {
       background-image: url("../img/blackford.png"); }
     .card .img.bloomfield {
